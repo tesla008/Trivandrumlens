@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react';
 import { Hero } from "@/components/sections/hero";
 import { Marquee } from "@/components/sections/marquee";
+import { VisualFeast } from "@/components/sections/visual-feast";
 import { Gallery } from "@/components/sections/gallery";
 import { Reviews } from "@/components/sections/reviews";
 import { Faq } from "@/components/sections/faq";
@@ -27,6 +28,7 @@ export default function Home() {
     <>
       <Hero />
       <Marquee />
+      <VisualFeast />
       <div id="specialties" className="pt-20 md:pt-32" />
       {/* Specialties could be a featured subset of the menu or another unique section */}
       <div id="gallery" />

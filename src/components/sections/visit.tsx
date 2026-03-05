@@ -1,13 +1,11 @@
 "use client";
 
-import { APIProvider, Map, Marker } from "@vis.gl/react-google-maps";
 import { Instagram, MapPin, Phone, Clock } from 'lucide-react';
 import Link from 'next/link';
+import Image from 'next/image';
+import { Button } from '@/components/ui/button';
 
 export function Visit() {
-  const position = { lat: 21.1098, lng: 79.0513 }; // Approx. Chhatrapati Square, Nagpur
-  const apiKey = process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY;
-
   return (
     <section id="visit" className="py-20 md:py-32 bg-background">
       <div className="container mx-auto px-4 md:px-6">
@@ -60,18 +58,21 @@ export function Visit() {
             </div>
           </div>
           
-          <div className="h-80 md:h-96 w-full rounded-lg overflow-hidden shadow-xl border-primary/20 border">
-            {apiKey ? (
-              <APIProvider apiKey={apiKey}>
-                <Map center={position} zoom={15} mapId="trivandrum-cafe-map" disableDefaultUI={true} gestureHandling={'greedy'}>
-                  <Marker position={position} />
-                </Map>
-              </APIProvider>
-            ) : (
-              <div className="w-full h-full bg-muted flex items-center justify-center">
-                <p className="text-muted-foreground text-center p-4">Google Maps cannot be displayed. <br />Please provide an API key.</p>
-              </div>
-            )}
+          <div className="w-full group">
+            <div className="h-80 md:h-96 w-full rounded-lg overflow-hidden shadow-xl border-primary/20 border transition-all duration-300 group-hover:shadow-2xl">
+              <Image 
+                src="https://exlaucgslmfiakllbtnq.supabase.co/storage/v1/object/public/Additional/Screenshot%202026-03-05%20at%204.12.16%20PM.png"
+                alt="Map location of Trivandrum Cafe"
+                width={800}
+                height={600}
+                className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
+              />
+            </div>
+             <Button asChild size="lg" className="w-full mt-4 bg-primary text-primary-foreground hover:bg-primary/90 shadow-lg transition-transform hover:scale-105">
+                <Link href="https://www.google.com/maps/search/?api=1&query=Trivandrum+Café+Near+Chhatrapati+Square,Nagpur,Maharashtra" target="_blank" rel="noopener noreferrer">
+                  Open in Google Maps
+                </Link>
+            </Button>
           </div>
         </div>
       </div>
