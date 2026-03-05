@@ -20,7 +20,7 @@ export const variants: Variant[] = [
     },
     {
         id: 'vada',
-        name: 'Medu Vada',
+        name: 'Trivandrum Café',
         subtitle: 'Crispy Lentil Delight',
         description: 'Golden crispy medu vada served hot with coconut chutney and flavorful sambhar — a classic South Indian favorite.',
         themeColor: '#EAB308', // A warm yellow
@@ -29,7 +29,7 @@ export const variants: Variant[] = [
     },
     {
         id: 'coffee',
-        name: 'Filter Coffee',
+        name: 'Trivandrum Café',
         subtitle: 'South Indian Classic',
         description: 'Freshly brewed South Indian filter coffee with rich aroma and smooth foam, served in a traditional brass tumbler.',
         themeColor: '#A16207', // A coffee brown
