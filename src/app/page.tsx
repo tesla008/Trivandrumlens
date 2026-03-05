@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { Hero } from "@/components/sections/hero";
+import { Marquee } from "@/components/sections/marquee";
 import { Menu } from "@/components/sections/menu";
 import { Gallery } from "@/components/sections/gallery";
 import { Reviews } from "@/components/sections/reviews";
@@ -26,6 +27,7 @@ export default function Home() {
   return (
     <>
       <Hero />
+      <Marquee />
       <div id="menu" />
       <Menu />
       <div id="specialties" className="pt-20 md:pt-32" />
