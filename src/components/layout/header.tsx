@@ -10,7 +10,6 @@ import { Menu as MenuIcon } from 'lucide-react';
 import { ThemeToggle } from '@/components/ui/theme-toggle';
 
 const navLinks = [
-  { href: '#menu', label: 'Menu' },
   { href: '#specialties', label: 'Specialties' },
   { href: '#gallery', label: 'Gallery' },
   { href: '#reviews', label: 'Reviews' },

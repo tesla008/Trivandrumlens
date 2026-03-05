@@ -118,9 +118,6 @@ export function Hero() {
             </AnimatePresence>
 
             <div className="mt-8 flex flex-col sm:flex-row gap-4">
-              <Button asChild size="lg" variant="outline" className="text-white bg-transparent hover:bg-white/10 shadow-lg backdrop-blur-sm transition-transform hover:scale-105" style={{ borderColor: accentColor }}>
-                <Link href="#menu">View Menu</Link>
-              </Button>
               <Button asChild size="lg" className="text-white shadow-lg transition-transform hover:scale-105" style={{ backgroundColor: accentColor }}>
                 <Link href="#contact">Visit Us</Link>
               </Button>

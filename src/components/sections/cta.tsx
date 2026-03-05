@@ -12,9 +12,6 @@ export function Cta() {
                     Your culinary journey awaits. Visit us to experience tradition in every bite, or explore our menu to plan your next meal.
                 </p>
                 <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
-                    <Button asChild size="lg" variant="outline" className="border-primary text-primary hover:bg-primary/5 shadow-lg transition-transform hover:scale-105">
-                        <Link href="#menu">View Menu</Link>
-                    </Button>
                     <Button asChild size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 shadow-lg transition-transform hover:scale-105">
                         <Link href="#contact">Visit Trivandrum Café</Link>
                     </Button>
