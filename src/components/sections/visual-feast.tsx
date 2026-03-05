@@ -84,14 +84,14 @@ export function VisualFeast() {
   }, [api, startAutoplay, stopAutoplay]);
 
   return (
-    <section id="visual-feast" className="py-20 md:py-24 bg-card">
+    <section id="locations" className="pt-20 md:pt-24 bg-card">
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center mb-16">
           <h2 className="font-headline text-4xl md:text-5xl font-bold text-primary">
-            A Visual Feast
+            Our Locations
           </h2>
           <p className="mt-4 text-lg text-foreground/80 max-w-2xl mx-auto">
-            Step into the warm ambience of Trivandrum Café
+            Explore our outlets across Nagpur.
           </p>
         </div>
 
