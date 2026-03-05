@@ -1,3 +1,76 @@
 {
-  "placeholderImages": []
+  "placeholderImages": [
+    {
+      "id": "hero-dosa",
+      "description": "A crispy dosa served on a traditional brass thali.",
+      "imageUrl": "https://picsum.photos/seed/dosa/1920/1080",
+      "imageHint": "south indian dosa"
+    },
+    {
+      "id": "hero-idli",
+      "description": "Soft idlis with a side of sambhar and chutneys.",
+      "imageUrl": "https://picsum.photos/seed/idli/1920/1080",
+      "imageHint": "south indian idli"
+    },
+    {
+      "id": "hero-vada",
+      "description": "Crispy medu vada served on a fresh banana leaf.",
+      "imageUrl": "https://picsum.photos/seed/vada/1920/1080",
+      "imageHint": "medu vada"
+    },
+    {
+      "id": "hero-uttapam",
+      "description": "A savory uttapam with various toppings.",
+      "imageUrl": "https://picsum.photos/seed/uttapam/1920/1080",
+      "imageHint": "uttapam dish"
+    },
+    {
+      "id": "hero-coffee",
+      "description": "Traditional South Indian filter coffee in a brass tumbler.",
+      "imageUrl": "https://picsum.photos/seed/coffee/1920/1080",
+      "imageHint": "filter coffee"
+    },
+    {
+      "id": "about-exterior",
+      "description": "The exterior of the Trivandrum Café.",
+      "imageUrl": "https://picsum.photos/seed/cafe-exterior/1200/800",
+      "imageHint": "cafe exterior"
+    },
+    {
+      "id": "gallery-dosa",
+      "description": "A delicious dosa on a plate.",
+      "imageUrl": "https://picsum.photos/seed/gallery-dosa/600/400",
+      "imageHint": "dosa plate"
+    },
+    {
+      "id": "gallery-idli",
+      "description": "A serving of idli, a popular breakfast dish.",
+      "imageUrl": "https://picsum.photos/seed/gallery-idli/600/400",
+      "imageHint": "idli plate"
+    },
+    {
+      "id": "gallery-vada",
+      "description": "A close-up of crispy vadas.",
+      "imageUrl": "https://picsum.photos/seed/gallery-vada/600/400",
+      "imageHint": "vada snack"
+    },
+    {
+      "id": "gallery-uttapam",
+      "description": "A freshly made uttapam ready to be eaten.",
+      "imageUrl": "https://picsum.photos/seed/gallery-uttapam/600/400",
+      "imageHint": "uttapam breakfast"
+    },
+    {
+      "id": "gallery-coffee",
+      "description": "Filter coffee being poured.",
+      "imageUrl": "https://picsum.photos/seed/gallery-coffee/600/400",
+      "imageHint": "indian coffee"
+    },
+    {
+      "id": "gallery-thali",
+      "description": "A complete South Indian thali meal.",
+      "imageUrl": "https://picsum.photos/seed/gallery-thali/600/400",
+      "imageHint": "thali meal"
+    }
+  ]
 }
