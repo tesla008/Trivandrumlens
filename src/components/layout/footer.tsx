@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { Instagram, MapPin, Phone, MessageSquare } from 'lucide-react';
 
 export function Footer() {
@@ -9,12 +10,20 @@ export function Footer() {
       <div className="container mx-auto px-4 md:px-6 py-12 text-foreground">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="col-span-1 md:col-span-2">
-            <Link href="/" className="text-3xl font-headline font-bold text-primary">
-              Trivandrum Café
+            <Link href="/" className="inline-block">
+              <Image
+                src="https://exlaucgslmfiakllbtnq.supabase.co/storage/v1/object/public/Additional/logo-removebg-preview.png"
+                alt="Trivandrum Café Logo"
+                width={200}
+                height={60}
+                className="h-14 w-auto"
+                loading="lazy"
+              />
             </Link>
-            <p className="mt-4 max-w-md text-foreground/80">
-              A culinary journey into the heart of South India, right here in Nagpur. Authentic flavors, warm hospitality.
+            <p className="mt-4 font-semibold text-lg text-foreground">
+              Trivandrum Café
             </p>
+            <p className="text-foreground/80">Authentic South Indian Cuisine<br/>Nagpur, India</p>
           </div>
           
           <div>

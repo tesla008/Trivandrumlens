@@ -1,8 +1,8 @@
 "use client";
 
 import { useState, useEffect } from 'react';
+import Image from 'next/image';
 import { Progress } from "@/components/ui/progress";
-import { Sparkles } from 'lucide-react';
 
 export function LoadingScreen() {
   const [progress, setProgress] = useState(13);
@@ -21,9 +21,16 @@ export function LoadingScreen() {
 
   return (
     <div className="fixed inset-0 z-[100] flex flex-col items-center justify-center bg-background text-foreground">
-      <div className="w-full max-w-md text-center">
-        <div className="flex items-center justify-center gap-2 text-3xl font-headline font-bold text-primary mb-4">
-           <Sparkles className="h-8 w-8" /> Trivandrum Café
+      <div className="w-full max-w-md text-center p-4">
+        <div className="flex items-center justify-center mb-4">
+            <Image
+                src="https://exlaucgslmfiakllbtnq.supabase.co/storage/v1/object/public/Additional/logo-removebg-preview.png"
+                alt="Trivandrum Café Logo"
+                width={240}
+                height={72}
+                className="h-18 w-auto animate-pulse"
+                priority
+            />
         </div>
         <Progress value={progress} className="w-full h-2" />
         <p className="mt-4 text-lg text-foreground/80 font-mono">{progress}%</p>
