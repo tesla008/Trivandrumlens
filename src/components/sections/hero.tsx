@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
@@ -10,9 +10,7 @@ import { ChevronDown } from 'lucide-react';
 
 const heroItems = [
   { id: 'hero-dosa', name: 'Dosa' },
-  { id: 'hero-idli', name: 'Idli' },
   { id: 'hero-vada', name: 'Vada' },
-  { id: 'hero-uttapam', name: 'Uttapam' },
   { id: 'hero-coffee', name: 'Filter Coffee' },
 ];
 
@@ -27,6 +25,13 @@ export function Hero() {
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setActiveItem((prev) => (prev + 1) % heroItems.length);
+    }, 5000);
+    return () => clearInterval(interval);
+  }, [heroItems.length]);
 
   const heroImages = heroItems.map(item =>
     PlaceHolderImages.find(img => img.id === item.id)

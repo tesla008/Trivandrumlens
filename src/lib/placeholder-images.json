@@ -2,9 +2,9 @@
   "placeholderImages": [
     {
       "id": "hero-dosa",
-      "description": "A crispy dosa served on a traditional brass thali.",
-      "imageUrl": "https://picsum.photos/seed/dosa/1920/1080",
-      "imageHint": "south indian dosa"
+      "description": "A delicious south indian dish.",
+      "imageUrl": "https://exlaucgslmfiakllbtnq.supabase.co/storage/v1/object/public/TrivandrumHero/frame_000_delay-0.041s.webp",
+      "imageHint": "south indian food"
     },
     {
       "id": "hero-idli",
@@ -15,7 +15,7 @@
     {
       "id": "hero-vada",
       "description": "Crispy medu vada served on a fresh banana leaf.",
-      "imageUrl": "https://picsum.photos/seed/vada/1920/1080",
+      "imageUrl": "https://exlaucgslmfiakllbtnq.supabase.co/storage/v1/object/public/Vada/frame_000_delay-0.041s.webp",
       "imageHint": "medu vada"
     },
     {
@@ -27,7 +27,7 @@
     {
       "id": "hero-coffee",
       "description": "Traditional South Indian filter coffee in a brass tumbler.",
-      "imageUrl": "https://picsum.photos/seed/coffee/1920/1080",
+      "imageUrl": "https://exlaucgslmfiakllbtnq.supabase.co/storage/v1/object/public/Filtercoffee/frame_000_delay-0.041s.webp",
       "imageHint": "filter coffee"
     },
     {
