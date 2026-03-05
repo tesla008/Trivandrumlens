@@ -4,14 +4,16 @@ import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
-import { cn } from '@/lib/utils';
 import { Button } from '@/components/ui/button';
 import { ChevronDown } from 'lucide-react';
 
 const heroItemIds = ['hero-dosa', 'hero-vada', 'hero-coffee'];
+const heroImages = heroItemIds.map(id => PlaceHolderImages.find(img => img.id === id)).filter(Boolean);
+
+// Define the scroll distance over which the entire image sequence transition occurs.
+const totalScrollForSequence = 600; // Images will cycle over 600px of scroll
 
 export function Hero() {
-  const [activeItem, setActiveItem] = useState(0);
   const [scrollY, setScrollY] = useState(0);
 
   useEffect(() => {
@@ -22,38 +24,54 @@ export function Hero() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setActiveItem((prev) => (prev + 1) % heroItemIds.length);
-    }, 5000);
-    return () => clearInterval(interval);
-  }, []);
-
-  const heroImages = heroItemIds.map(id =>
-    PlaceHolderImages.find(img => img.id === id)
-  ).filter(Boolean);
-
   const parallaxOffset = scrollY * 0.4;
+  
+  // Calculate the current progress through the image sequence based on scroll position.
+  const sequenceProgress = Math.min(1, scrollY / totalScrollForSequence);
+
+  // Determine which two images to cross-fade between.
+  const imageIndexFloat = sequenceProgress * (heroImages.length - 1);
+  const fromIndex = Math.floor(imageIndexFloat);
+  const toIndex = Math.ceil(imageIndexFloat);
+  
+  // Calculate the progress of the transition between the two current images.
+  const transitionProgress = imageIndexFloat - fromIndex;
 
   return (
     <section id="home" className="relative h-screen w-full overflow-hidden">
-      {heroImages.map((image, index) => (
-        image && (
+      {heroImages.map((image, index) => {
+        if (!image) return null;
+
+        let opacity = 0;
+        if (fromIndex === toIndex) {
+            if (index === fromIndex) {
+                opacity = 1;
+            }
+        } else {
+            if (index === fromIndex) {
+                opacity = 1 - transitionProgress;
+            }
+            if (index === toIndex) {
+                opacity = transitionProgress;
+            }
+        }
+
+        return (
           <Image
             key={image.id}
             src={image.imageUrl}
             alt={image.description}
             fill
             priority={index === 0}
-            className={cn(
-              "object-cover transition-opacity duration-1000 ease-in-out",
-              activeItem === index ? "opacity-100" : "opacity-0"
-            )}
-            style={{ transform: `translate3d(0, ${parallaxOffset}px, 0)` }}
+            className="object-cover"
+            style={{ 
+              transform: `translate3d(0, ${parallaxOffset}px, 0)`,
+              opacity: opacity
+            }}
             data-ai-hint={image.imageHint}
           />
-        )
-      ))}
+        );
+      })}
       <div className="absolute inset-0 bg-black/40" />
       
       <div className="relative z-10 container mx-auto flex h-full flex-col justify-center items-center text-center px-4 md:px-6">
