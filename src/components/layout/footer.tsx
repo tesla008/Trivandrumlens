@@ -27,10 +27,14 @@ export function Footer() {
           </div>
           
           <div>
-            <h4 className="font-semibold text-foreground uppercase tracking-wider text-sm mb-4">Find Us</h4>
+            <h4 className="font-semibold text-foreground uppercase tracking-wider text-sm mb-4">Our Locations</h4>
             <div className="flex items-start gap-3">
-              <MapPin className="h-5 w-5 mt-1 text-primary" />
-              <p className="text-foreground/80">Near Chhatrapati Square,<br/>Nagpur, Maharashtra</p>
+              <MapPin className="h-5 w-5 mt-1 text-primary flex-shrink-0" />
+              <div>
+                <p className="text-foreground/80">Chhatrapati Square</p>
+                <p className="text-foreground/80">Trimurti Nagar</p>
+                <p className="text-foreground/80">Tukdoji Putla Square</p>
+              </div>
             </div>
           </div>
 
@@ -41,7 +45,7 @@ export function Footer() {
               <span className="text-foreground/80">+91 095296 58611</span>
             </div>
             <div className="flex space-x-4">
-              <Link href="#" aria-label="Instagram" className="text-foreground/80 hover:text-primary transition-colors"><Instagram className="h-6 w-6" /></Link>
+              <Link href="https://www.instagram.com/trivandrum_cafe_official/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="text-foreground/80 hover:text-primary transition-colors"><Instagram className="h-6 w-6" /></Link>
               <Link href="#" aria-label="Google Maps" className="text-foreground/80 hover:text-primary transition-colors"><MapPin className="h-6 w-6" /></Link>
               <Link href="#" aria-label="WhatsApp" className="text-foreground/80 hover:text-primary transition-colors"><MessageSquare className="h-6 w-6" /></Link>
             </div>
