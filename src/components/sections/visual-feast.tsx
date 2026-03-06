@@ -16,17 +16,20 @@ const outlets = [
   {
     src: "https://exlaucgslmfiakllbtnq.supabase.co/storage/v1/object/public/Additional/chtrapatisqlocation.jpeg",
     alt: "Trivandrum Café at Chhatrapati Square",
-    caption: "Chhatrapati Square Outlet",
+    width: 1200,
+    height: 900,
   },
   {
     src: "https://exlaucgslmfiakllbtnq.supabase.co/storage/v1/object/public/Additional/trimurtinagar.jpeg",
     alt: "Trivandrum Café at Trimurti Nagar",
-    caption: "Trimurti Nagar Outlet",
+    width: 1200,
+    height: 800,
   },
   {
     src: "https://exlaucgslmfiakllbtnq.supabase.co/storage/v1/object/public/Additional/tukdojilocation.jpeg",
     alt: "Trivandrum Café at Tukdoji Square",
-    caption: "Tukdoji Square Outlet",
+    width: 1078,
+    height: 514,
   },
 ];
 
@@ -105,21 +108,16 @@ export function VisualFeast() {
               {outlets.map((outlet, index) => (
                 <CarouselItem key={index}>
                   <Card className="overflow-hidden group rounded-lg shadow-lg">
-                    <CardContent className="p-0 flex aspect-video items-center justify-center relative">
+                    <CardContent className="p-0 relative">
                       <Image
                         src={outlet.src}
                         alt={outlet.alt}
-                        width={1280}
-                        height={720}
-                        className="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500"
+                        width={outlet.width}
+                        height={outlet.height}
+                        className="w-full h-auto group-hover:scale-105 transition-transform duration-500"
                         priority={index === 0}
                         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 1280px"
                       />
-                      <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/70 to-transparent p-6 text-left">
-                         <p className="text-white font-headline text-xl md:text-2xl font-semibold drop-shadow-md">
-                            {outlet.caption}
-                         </p>
-                      </div>
                     </CardContent>
                   </Card>
                 </CarouselItem>
