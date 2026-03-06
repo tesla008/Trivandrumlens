@@ -103,7 +103,7 @@ export function VisualFeast() {
           onMouseEnter={stopAutoplay}
           onMouseLeave={startAutoplay}
         >
-          <Carousel setApi={setApi} className="w-full max-w-4xl mx-auto">
+          <Carousel setApi={setApi} className="w-full max-w-3xl mx-auto">
             <CarouselContent>
               {outlets.map((outlet, index) => (
                 <CarouselItem key={index}>
@@ -116,7 +116,8 @@ export function VisualFeast() {
                         height={outlet.height}
                         className="w-full h-auto group-hover:scale-105 transition-transform duration-500"
                         priority={index === 0}
-                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 1280px"
+                        sizes="(max-width: 768px) 100vw, 768px"
+                        quality={90}
                       />
                     </CardContent>
                   </Card>
