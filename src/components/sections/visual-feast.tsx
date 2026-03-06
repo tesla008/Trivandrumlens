@@ -14,22 +14,22 @@ import {
 
 const outlets = [
   {
-    src: "https://exlaucgslmfiakllbtnq.supabase.co/storage/v1/object/public/Additional/chtrapatisqlocation.jpeg",
+    src: "https://exlaucgslmfiakllbtnq.supabase.co/storage/v1/object/public/Additional/chtrapatisqlocation.png",
     alt: "Trivandrum Café at Chhatrapati Square",
-    width: 1200,
-    height: 900,
+    width: 900,
+    height: 675,
   },
   {
-    src: "https://exlaucgslmfiakllbtnq.supabase.co/storage/v1/object/public/Additional/trimurtinagar.jpeg",
+    src: "https://exlaucgslmfiakllbtnq.supabase.co/storage/v1/object/public/Additional/trimurtinagar.png",
     alt: "Trivandrum Café at Trimurti Nagar",
-    width: 1200,
-    height: 800,
+    width: 900,
+    height: 600,
   },
   {
-    src: "https://exlaucgslmfiakllbtnq.supabase.co/storage/v1/object/public/Additional/tukdojilocation.jpeg",
+    src: "https://exlaucgslmfiakllbtnq.supabase.co/storage/v1/object/public/Additional/tukdojilocation.png",
     alt: "Trivandrum Café at Tukdoji Square",
-    width: 1078,
-    height: 514,
+    width: 808,
+    height: 385,
   },
 ];
 
@@ -103,7 +103,7 @@ export function VisualFeast() {
           onMouseEnter={stopAutoplay}
           onMouseLeave={startAutoplay}
         >
-          <Carousel setApi={setApi} className="w-full max-w-5xl mx-auto">
+          <Carousel setApi={setApi} className="w-full max-w-4xl mx-auto">
             <CarouselContent>
               {outlets.map((outlet, index) => (
                 <CarouselItem key={index}>
