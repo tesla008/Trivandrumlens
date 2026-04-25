@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { Instagram, MapPin, Phone, MessageSquare } from 'lucide-react';
+import { Button } from '@/components/ui/button';
 
 export function Footer() {
   const year = new Date().getFullYear();
@@ -51,9 +52,24 @@ export function Footer() {
             </div>
           </div>
         </div>
-        <div className="mt-12 border-t border-border pt-8 text-center text-sm text-foreground/60">
-          <p>&copy; {year} Trivandrum Café. All rights reserved.</p>
+        
+        <div className="mt-12 border-t border-border pt-8">
+            <div className="text-center">
+                <h4 className="font-semibold text-foreground uppercase tracking-wider text-sm mb-4">Franchise Enquiry</h4>
+                <p className="text-foreground/80 max-w-md mx-auto mb-6">
+                    Interested in opening a Trivandrum Cafe franchise? Get in touch with us.
+                </p>
+                <Button asChild size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 shadow-lg transition-transform hover:scale-105">
+                    <Link href="https://forms.gle/42hVF8SDbmEg9MLG7" target="_blank" rel="noopener noreferrer">
+                    Apply for Franchise
+                    </Link>
+                </Button>
+            </div>
+            <div className="mt-12 text-center text-sm text-foreground/60">
+                <p>&copy; {year} Trivandrum Café. All rights reserved.</p>
+            </div>
         </div>
+
       </div>
     </footer>
   );
