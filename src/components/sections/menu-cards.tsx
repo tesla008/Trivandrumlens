@@ -12,10 +12,8 @@ const menuImages = [
   { id: 'menu-1', src: 'https://exlaucgslmfiakllbtnq.supabase.co/storage/v1/object/public/Additional/menu1.jpg', alt: 'Menu Card Page 1' },
   { id: 'menu-2', src: 'https://exlaucgslmfiakllbtnq.supabase.co/storage/v1/object/public/Additional/menu2.jpg', alt: 'Menu Card Page 2' },
   { id: 'menu-3', src: 'https://exlaucgslmfiakllbtnq.supabase.co/storage/v1/object/public/Additional/menu3.jpg', alt: 'Menu Card Page 3' },
-  { id: 'menu-4', src: 'https://exlaucgslmfiakllbtnq.supabase.co/storage/v1/object/public/Additional/menu4.jpg', alt: 'Menu Card Page 4' },
   { id: 'menu-5', src: 'https://exlaucgslmfiakllbtnq.supabase.co/storage/v1/object/public/Additional/menu5.jpg', alt: 'Menu Card Page 5' },
   { id: 'menu-6', src: 'https://exlaucgslmfiakllbtnq.supabase.co/storage/v1/object/public/Additional/menu6.jpg', alt: 'Menu Card Page 6' },
-  { id: 'menu-7', src: 'https://exlaucgslmfiakllbtnq.supabase.co/storage/v1/object/public/Additional/menu7.jpg', alt: 'Menu Card Page 7' },
   { id: 'menu-8', src: 'https://exlaucgslmfiakllbtnq.supabase.co/storage/v1/object/public/Additional/menu8.jpg', alt: 'Menu Card Page 8' },
   { id: 'menu-9', src: 'https://exlaucgslmfiakllbtnq.supabase.co/storage/v1/object/public/Additional/menu9.jpg', alt: 'Menu Card Page 9' },
 ];
