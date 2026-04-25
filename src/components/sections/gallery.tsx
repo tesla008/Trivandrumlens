@@ -44,11 +44,6 @@ export function Gallery() {
   return (
     <section className="py-20 md:py-32 bg-background/50">
       <div className="container mx-auto px-4 md:px-6">
-        <div className="text-center mb-20">
-          <h2 className="font-headline text-4xl md:text-5xl font-bold text-primary">A Visual Feast</h2>
-          <p className="mt-4 text-lg text-foreground/80 max-w-2xl mx-auto">A glimpse into the authentic and delicious world of Trivandrum Café.</p>
-        </div>
-
         <div className="space-y-20 md:space-y-24">
             <div>
                 <h3 className="font-headline text-3xl md:text-4xl font-bold text-primary text-center mb-4">Trusted by Families</h3>
