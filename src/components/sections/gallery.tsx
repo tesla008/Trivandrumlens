@@ -1,16 +1,6 @@
 import Image from 'next/image';
 import { Card } from '@/components/ui/card';
 
-// Section 1: Menu
-const menuImages = [
-    { id: 'gallery-set-dosa', src: 'https://exlaucgslmfiakllbtnq.supabase.co/storage/v1/object/public/Additional/Setdosa01.png', alt: 'A plate of Set Dosa', title: 'Set Dosa' },
-    { id: 'gallery-idli', src: 'https://exlaucgslmfiakllbtnq.supabase.co/storage/v1/object/public/Additional/Idly01.png', alt: 'Idli with chutney and sambar', title: 'Idli Platter' },
-    { id: 'gallery-masala-dosa', src: 'https://exlaucgslmfiakllbtnq.supabase.co/storage/v1/object/public/Additional/tri13.jpg', alt: 'Crispy Masala Dosa', title: 'Masala Dosa' },
-    { id: 'gallery-vada', src: 'https://exlaucgslmfiakllbtnq.supabase.co/storage/v1/object/public/Additional/tri6.jpg', alt: 'Crispy Medu Vada', title: 'Medu Vada' },
-    { id: 'gallery-breakfast', src: 'https://exlaucgslmfiakllbtnq.supabase.co/storage/v1/object/public/Additional/tri9.jpg', alt: 'A full South Indian breakfast spread', title: 'Breakfast Platter' },
-    { id: 'gallery-coffee', src: 'https://exlaucgslmfiakllbtnq.supabase.co/storage/v1/object/public/Additional/Tea02.png', alt: 'Traditional filter coffee', title: 'Filter Coffee' },
-];
-
 // Section 2: Trusted by Families
 const familyImages = [
     { id: 'family-1', src: 'https://exlaucgslmfiakllbtnq.supabase.co/storage/v1/object/public/Additional/family1.jpg', alt: 'Family enjoying a meal', title: 'Shared Moments' },
@@ -60,11 +50,6 @@ export function Gallery() {
         </div>
 
         <div className="space-y-20 md:space-y-24">
-            <div>
-                <h3 className="font-headline text-3xl md:text-4xl font-bold text-primary text-center mb-12">Our Menu</h3>
-                <GalleryGrid images={menuImages} />
-            </div>
-
             <div>
                 <h3 className="font-headline text-3xl md:text-4xl font-bold text-primary text-center mb-4">Trusted by Families</h3>
                 <p className="text-md text-foreground/70 max-w-2xl mx-auto text-center mb-12">Moments shared over authentic South Indian flavors</p>

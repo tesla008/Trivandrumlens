@@ -20,11 +20,6 @@ const dishes = [
     image: "https://exlaucgslmfiakllbtnq.supabase.co/storage/v1/object/public/Additional/tri13.jpg"
   },
   {
-    name: "Set Dosa with Filter Coffee",
-    description: "Soft dosa set served with traditional brass filter coffee",
-    image: "https://exlaucgslmfiakllbtnq.supabase.co/storage/v1/object/public/Additional/Tea02.png"
-  },
-  {
     name: "Ghee Podi Idli",
     description: "Idlis coated with aromatic podi masala and ghee",
     image: "https://exlaucgslmfiakllbtnq.supabase.co/storage/v1/object/public/Additional/Idly01.png"

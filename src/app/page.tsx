@@ -9,6 +9,7 @@ import { SignatureDishes } from "@/components/sections/signature-dishes";
 import { Reviews } from "@/components/sections/reviews";
 import { Faq } from "@/components/sections/faq";
 import { LoadingScreen } from "@/components/loading-screen";
+import { MissionVision } from '@/components/sections/mission-vision';
 
 export default function Home() {
   const [loading, setLoading] = useState(true);
@@ -31,6 +32,7 @@ export default function Home() {
       <Marquee />
       <VisualFeast />
       <SignatureDishes />
+      <MissionVision />
       <div id="gallery" />
       <Gallery />
       <div id="reviews" />

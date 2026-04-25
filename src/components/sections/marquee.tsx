@@ -1,7 +1,7 @@
 import * as React from 'react';
 
 const menuItems = [
-  'Ghee Podi Dosa', 'Masala Dosa', 'Set Dosa', 'Plain Dosa', 'Medu Vada', 'Idli with Chutney', 'Onion Uttapam', 'Tomato Uttapam', 'Sambar Rice', 'Curd Rice', 'Veg Pulav', 'Poori Bhaji', 'Appam', 'Filter Coffee', 'Rose Milk', 'Cold Coffee', 'Buttermilk'
+  'Ghee Podi Dosa', 'Masala Dosa', 'Plain Dosa', 'Medu Vada', 'Idli with Chutney', 'Onion Uttapam', 'Tomato Uttapam', 'Sambar Rice', 'Curd Rice', 'Veg Pulav', 'Poori Bhaji', 'Appam', 'Filter Coffee', 'Rose Milk', 'Cold Coffee', 'Buttermilk'
 ];
 
 const MarqueeContent = () => (
