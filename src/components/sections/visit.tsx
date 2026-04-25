@@ -42,7 +42,9 @@ export function Visit() {
               </div>
               <div>
                 <h3 className="font-semibold text-lg text-foreground">Contact</h3>
-                <p className="text-foreground/80">+91 095296 58611</p>
+                <p className="text-foreground/80">
+                  <a href="tel:+919529658611" className="hover:text-primary transition-colors">+91 95296 58611</a>
+                </p>
               </div>
             </div>
             <div className="flex items-start gap-4">

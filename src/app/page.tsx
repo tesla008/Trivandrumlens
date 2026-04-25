@@ -10,6 +10,7 @@ import { Reviews } from "@/components/sections/reviews";
 import { Faq } from "@/components/sections/faq";
 import { LoadingScreen } from "@/components/loading-screen";
 import { MissionVision } from '@/components/sections/mission-vision';
+import { MenuCards } from '@/components/sections/menu-cards';
 
 export default function Home() {
   const [loading, setLoading] = useState(true);
@@ -33,6 +34,7 @@ export default function Home() {
       <VisualFeast />
       <SignatureDishes />
       <MissionVision />
+      <MenuCards />
       <div id="gallery" />
       <Gallery />
       <div id="reviews" />
