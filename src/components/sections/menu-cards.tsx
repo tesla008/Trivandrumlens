@@ -10,7 +10,6 @@ import { X, Eye } from 'lucide-react';
 
 const menuImages = [
   { id: 'menu-1', src: 'https://exlaucgslmfiakllbtnq.supabase.co/storage/v1/object/public/Additional/menu1.jpg', alt: 'Menu Card Page 1' },
-  { id: 'menu-2', src: 'https://exlaucgslmfiakllbtnq.supabase.co/storage/v1/object/public/Additional/menu2.jpg', alt: 'Menu Card Page 2' },
   { id: 'menu-3', src: 'https://exlaucgslmfiakllbtnq.supabase.co/storage/v1/object/public/Additional/menu3.jpg', alt: 'Menu Card Page 3' },
   { id: 'menu-5', src: 'https://exlaucgslmfiakllbtnq.supabase.co/storage/v1/object/public/Additional/menu5.jpg', alt: 'Menu Card Page 5' },
   { id: 'menu-6', src: 'https://exlaucgslmfiakllbtnq.supabase.co/storage/v1/object/public/Additional/menu6.jpg', alt: 'Menu Card Page 6' },
@@ -48,7 +47,7 @@ export function MenuCards() {
                     src={image.src}
                     alt={image.alt}
                     fill
-                    className="object-cover transition-transform duration-500 ease-in-out group-hover:scale-105"
+                    className="object-contain p-2 transition-transform duration-500 ease-in-out"
                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                     loading="lazy"
                   />
