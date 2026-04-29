@@ -15,34 +15,34 @@ import Autoplay from "embla-carousel-autoplay";
 
 const dishes = [
   {
-    name: "Masala Dosa",
-    description: "Folded dosa served with chutneys and sambar",
-    image: "https://exlaucgslmfiakllbtnq.supabase.co/storage/v1/object/public/Additional/tri13.jpg"
+    name: "Punugulu",
+    description: "Crispy deep-fried rice and lentil batter balls.",
+    image: "https://exlaucgslmfiakllbtnq.supabase.co/storage/v1/object/public/Additional/Punugulu.jpeg"
   },
   {
-    name: "Ghee Podi Idli",
-    description: "Idlis coated with aromatic podi masala and ghee",
-    image: "https://exlaucgslmfiakllbtnq.supabase.co/storage/v1/object/public/Additional/Idly01.png"
+    name: "Idli Sambhar",
+    description: "Steamed rice cakes served with flavorful lentil-based vegetable stew.",
+    image: "https://exlaucgslmfiakllbtnq.supabase.co/storage/v1/object/public/Additional/idliSambhar.JPG"
   },
   {
-    name: "Mysore Bonda",
-    description: "Crispy fried snacks served with chutney and sambar",
-    image: "https://exlaucgslmfiakllbtnq.supabase.co/storage/v1/object/public/Additional/tri9.jpg"
+    name: "Hyderabadi Mushroom Curry",
+    description: "A rich and aromatic mushroom curry from Hyderabadi cuisine.",
+    image: "https://exlaucgslmfiakllbtnq.supabase.co/storage/v1/object/public/Additional/HyderabadiMushroomcurry.JPG"
   },
   {
-    name: "Uttapam",
-    description: "Thick dosa topped with onions and vegetables",
-    image: "https://exlaucgslmfiakllbtnq.supabase.co/storage/v1/object/public/Additional/tri8.jpg"
+    name: "Ghee Podi Thatte Idli",
+    description: "Large, plate-sized idlis generously topped with ghee and podi.",
+    image: "https://exlaucgslmfiakllbtnq.supabase.co/storage/v1/object/public/Additional/GheePodiThatteIdli.JPG"
   },
   {
-    name: "Idli with Chutneys & Sambar",
-    description: "Classic steamed idlis served on banana leaf with chutneys",
-    image: "https://exlaucgslmfiakllbtnq.supabase.co/storage/v1/object/public/Additional/Idly01.png"
+    name: "Sambhar Vada",
+    description: "Savory lentil donuts soaked in hot, tangy sambar.",
+    image: "https://exlaucgslmfiakllbtnq.supabase.co/storage/v1/object/public/Additional/Sambharvada.JPG"
   },
   {
-    name: "Medu Vada",
-    description: "Donut-shaped fried lentil vada served with chutneys",
-    image: "https://exlaucgslmfiakllbtnq.supabase.co/storage/v1/object/public/Additional/tri6.jpg"
+    name: "Lemon Rice",
+    description: "A tangy and flavorful rice dish with lemon, peanuts, and spices.",
+    image: "https://exlaucgslmfiakllbtnq.supabase.co/storage/v1/object/public/Additional/Lemontice.JPG"
   }
 ];
 
