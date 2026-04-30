@@ -1,3 +1,4 @@
+
 "use client";
 
 import { useState, useEffect } from 'react';
@@ -23,7 +24,7 @@ export function Header() {
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 10);
+      setIsScrolled(window.scrollY > 50);
     };
     window.addEventListener('scroll', handleScroll);
     return () => {
@@ -36,7 +37,24 @@ export function Header() {
       "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
       isScrolled ? "bg-background/80 backdrop-blur-sm border-b" : "bg-transparent"
     )}>
-      <div className="container mx-auto flex h-20 items-center justify-end px-4 md:px-6">
+      <div className="container mx-auto flex h-20 items-center px-4 md:px-6">
+        
+        <Link 
+          href="/" 
+          className={cn(
+            "transition-all duration-500 ease-in-out mr-auto flex items-center",
+            isScrolled ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-4 pointer-events-none"
+          )}
+        >
+          <Image
+            src="https://exlaucgslmfiakllbtnq.supabase.co/storage/v1/object/public/Additional/logo-removebg-preview.png"
+            alt="Trivandrum Café Logo"
+            width={160}
+            height={48}
+            className="h-10 md:h-12 w-auto drop-shadow-sm"
+            priority
+          />
+        </Link>
         
         <nav className="hidden md:flex items-center space-x-8">
           {navLinks.map((link) => (
