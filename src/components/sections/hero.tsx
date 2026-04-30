@@ -34,24 +34,24 @@ export function Hero() {
         <div className="col-span-12 md:col-span-8 lg:col-span-7 flex flex-col justify-center" style={{ color: '#fffaf0' }}>
           
           <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            animate={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
-            className="mb-8 md:mb-12"
+            className="mb-6 md:mb-8"
           >
             <Image
               src="https://exlaucgslmfiakllbtnq.supabase.co/storage/v1/object/public/Additional/logo-removebg-preview.png"
               alt="Trivandrum Café Logo"
-              width={600}
-              height={180}
-              className="h-32 md:h-52 w-auto drop-shadow-2xl -ml-4 md:-ml-8"
+              width={500}
+              height={150}
+              className="h-28 md:h-44 w-auto drop-shadow-2xl"
               priority
             />
           </motion.div>
 
           <motion.div
             initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0, transition: { delay: 0.4, duration: 0.8 } }}
+            animate={{ opacity: 1, y: 0, transition: { delay: 0.3, duration: 0.8 } }}
             className="max-w-2xl"
           >
             <h1 className="font-headline text-5xl md:text-7xl font-bold tracking-tighter uppercase" style={{ textShadow: '0 4px 20px rgba(0,0,0,0.6)'}}>
@@ -67,10 +67,10 @@ export function Hero() {
 
           <motion.div
             initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0, transition: { delay: 0.6, duration: 0.8 } }}
+            animate={{ opacity: 1, y: 0, transition: { delay: 0.5, duration: 0.8 } }}
             className="mt-8 flex flex-col sm:flex-row gap-4"
           >
-            <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90 shadow-lg transition-transform hover:scale-105">
+            <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90 shadow-lg transition-transform hover:scale-105 w-fit">
               <Link href="#contact">Visit Us</Link>
             </Button>
           </motion.div>
