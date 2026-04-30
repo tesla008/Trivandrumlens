@@ -6,7 +6,7 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Dialog, DialogContent } from '@/components/ui/dialog';
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel';
 import { Button } from '@/components/ui/button';
-import { X, Eye } from 'lucide-react';
+import { X, Eye, ImageOff } from 'lucide-react';
 
 const menuImages = [
   { id: 'menu-3', src: 'https://exlaucgslmfiakllbtnq.supabase.co/storage/v1/object/public/Additional/menu3.jpg', alt: 'Menu Card Page 3' },
@@ -18,10 +18,15 @@ const menuImages = [
 export function MenuCards() {
   const [isOpen, setIsOpen] = useState(false);
   const [startIndex, setStartIndex] = useState(0);
+  const [imageErrors, setImageErrors] = useState<Record<string, boolean>>({});
 
   const openModal = (index: number) => {
     setStartIndex(index);
     setIsOpen(true);
+  };
+
+  const handleImageError = (id: string) => {
+    setImageErrors(prev => ({ ...prev, [id]: true }));
   };
 
   return (
@@ -42,14 +47,22 @@ export function MenuCards() {
                 className="group overflow-hidden rounded-lg shadow-lg hover:shadow-2xl transition-all duration-300 ease-in-out"
               >
                 <CardContent className="p-0 relative aspect-[4/5] bg-card">
-                  <Image
-                    src={image.src}
-                    alt={image.alt}
-                    fill
-                    className="object-contain p-2 transition-transform duration-500 ease-in-out"
-                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                    loading="lazy"
-                  />
+                  {imageErrors[image.id] ? (
+                    <div className="flex flex-col items-center justify-center h-full w-full bg-muted text-muted-foreground p-4 text-center">
+                      <ImageOff className="h-10 w-10 mb-2 opacity-50" />
+                      <p className="text-sm">Menu image not available</p>
+                    </div>
+                  ) : (
+                    <Image
+                      src={image.src}
+                      alt={image.alt}
+                      fill
+                      className="object-contain p-2 transition-transform duration-500 ease-in-out"
+                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                      loading="lazy"
+                      onError={() => handleImageError(image.id)}
+                    />
+                  )}
                   <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                     <Button 
                       variant="outline"
@@ -69,32 +82,45 @@ export function MenuCards() {
       </section>
 
       <Dialog open={isOpen} onOpenChange={setIsOpen}>
-        <DialogContent className="max-w-none w-screen h-screen bg-black/80 border-0 shadow-none p-4 flex items-center justify-center">
+        <DialogContent className="max-w-none w-screen h-screen bg-black/95 border-0 shadow-none p-0 flex items-center justify-center">
             <Carousel 
+                key={startIndex}
                 opts={{ loop: true, startIndex: startIndex }} 
-                className="w-full h-full max-w-lg md:max-w-xl"
+                className="w-full h-full max-w-5xl"
             >
-                <CarouselContent className="h-full">
+                <CarouselContent className="h-full" viewportClassName="h-full">
                 {menuImages.map((image, index) => (
-                    <CarouselItem key={index} className="h-full flex items-center justify-center">
+                    <CarouselItem key={index} className="h-full flex items-center justify-center p-4">
                     <div className="relative w-full h-full">
-                        <Image
+                        {imageErrors[image.id] ? (
+                          <div className="flex flex-col items-center justify-center h-full w-full text-white/50 text-center">
+                            <ImageOff className="h-20 w-20 mb-4 opacity-50" />
+                            <p className="text-xl">Menu image not available</p>
+                          </div>
+                        ) : (
+                          <Image
                             src={image.src}
                             alt={image.alt}
                             fill
                             className="object-contain"
                             sizes="100vw"
-                            quality={95}
-                        />
+                            quality={100}
+                            priority={startIndex === index}
+                            onError={() => handleImageError(image.id)}
+                          />
+                        )}
                     </div>
                     </CarouselItem>
                 ))}
                 </CarouselContent>
-                <CarouselPrevious className="absolute left-2 md:-left-16 text-white bg-black/30 hover:bg-black/50 border-white/50" />
-                <CarouselNext className="absolute right-2 md:-right-16 text-white bg-black/30 hover:bg-black/50 border-white/50" />
+                <CarouselPrevious className="absolute left-4 text-white bg-black/50 hover:bg-black/80 border-white/20 h-12 w-12" />
+                <CarouselNext className="absolute right-4 text-white bg-black/50 hover:bg-black/80 border-white/20 h-12 w-12" />
             </Carousel>
-            <button onClick={() => setIsOpen(false)} className="absolute top-4 right-4 text-white p-2 rounded-full bg-black/50 hover:bg-black/70 transition-colors">
-                <X className="h-6 w-6" />
+            <button 
+              onClick={() => setIsOpen(false)} 
+              className="absolute top-6 right-6 text-white p-2 rounded-full bg-black/50 hover:bg-black/80 transition-colors z-[60]"
+            >
+                <X className="h-8 w-8" />
                 <span className="sr-only">Close</span>
             </button>
         </DialogContent>
