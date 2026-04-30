@@ -37,14 +37,14 @@ export function Hero() {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
-            className="mb-6 md:mb-8"
+            className="mb-1 md:mb-2"
           >
             <Image
               src="https://exlaucgslmfiakllbtnq.supabase.co/storage/v1/object/public/Additional/logo-removebg-preview.png"
               alt="Trivandrum Café Logo"
-              width={500}
-              height={150}
-              className="h-28 md:h-44 w-auto drop-shadow-2xl"
+              width={600}
+              height={180}
+              className="h-32 md:h-64 w-auto drop-shadow-2xl"
               priority
             />
           </motion.div>
