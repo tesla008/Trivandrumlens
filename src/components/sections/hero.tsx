@@ -30,26 +30,25 @@ export function Hero() {
         }}
       />
       
-      {/* Large Centered Logo */}
-      <div className="absolute top-24 left-1/2 -translate-x-1/2 z-20 w-full flex justify-center px-4">
-        <motion.div
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-        >
-          <Image
-            src="https://exlaucgslmfiakllbtnq.supabase.co/storage/v1/object/public/Additional/logo-removebg-preview.png"
-            alt="Trivandrum Café Logo"
-            width={400}
-            height={120}
-            className="h-24 md:h-36 w-auto drop-shadow-2xl"
-            priority
-          />
-        </motion.div>
-      </div>
-
       <div className="relative z-10 container mx-auto grid grid-cols-12 h-full px-4 md:px-6">
-        <div className="col-span-12 md:col-span-7 flex flex-col justify-center" style={{ color: '#fffaf0' }}>
+        <div className="col-span-12 md:col-span-8 lg:col-span-7 flex flex-col justify-center" style={{ color: '#fffaf0' }}>
+          
+          <motion.div
+            initial={{ opacity: 0, x: -30 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            className="mb-8 md:mb-12"
+          >
+            <Image
+              src="https://exlaucgslmfiakllbtnq.supabase.co/storage/v1/object/public/Additional/logo-removebg-preview.png"
+              alt="Trivandrum Café Logo"
+              width={600}
+              height={180}
+              className="h-32 md:h-52 w-auto drop-shadow-2xl -ml-4 md:-ml-8"
+              priority
+            />
+          </motion.div>
+
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0, transition: { delay: 0.4, duration: 0.8 } }}
