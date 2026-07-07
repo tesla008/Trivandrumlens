@@ -11,7 +11,7 @@
     --popover: 40 100% 95%;
     --popover-foreground: 25 35% 15%;
     --primary: 45 53% 49%; /* Brass Gold */
-    --primary-foreground: 40 100% 98%;
+    --primary-foreground: 25 35% 15%; /* Deep Brown for high contrast on gold */
     --secondary: 40 20% 90%;
     --secondary-foreground: 25 35% 25%;
     --muted: 40 20% 90%;
@@ -33,7 +33,7 @@
     --popover: 25 35% 15%;
     --popover-foreground: 40 100% 95%;
     --primary: 45 53% 49%; /* Brass Gold */
-    --primary-foreground: 40 100% 98%;
+    --primary-foreground: 25 35% 10%; /* Darker brown for contrast in dark mode */
     --secondary: 25 35% 25%;
     --secondary-foreground: 40 100% 95%;
     --muted: 25 35% 25%;

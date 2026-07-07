@@ -1,4 +1,3 @@
-
 "use client";
 
 import Image from "next/image";
@@ -55,9 +54,9 @@ export function SignatureDishes() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
           {dishes.map((dish, index) => (
-            <Card key={index} className="group border-none bg-transparent shadow-none">
+            <Card key={index} className="group border-none bg-background rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300">
               <CardContent className="p-0 space-y-6">
-                <div className="relative aspect-square overflow-hidden rounded-2xl shadow-md transition-all duration-500 group-hover:shadow-xl group-hover:-translate-y-1">
+                <div className="relative aspect-square overflow-hidden rounded-t-2xl">
                   <Image
                     src={dish.image}
                     alt={dish.name}
@@ -66,11 +65,10 @@ export function SignatureDishes() {
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     loading="lazy"
                   />
-                  <div className="absolute inset-0 bg-black/5 group-hover:bg-black/0 transition-colors duration-500" />
                 </div>
                 
-                <div className="space-y-2 text-center">
-                  <h3 className="font-headline text-2xl md:text-3xl font-bold text-foreground group-hover:text-primary transition-colors duration-300">
+                <div className="p-6 pt-0 space-y-3 text-center">
+                  <h3 className="font-headline text-2xl md:text-3xl font-bold text-foreground">
                     {dish.name}
                   </h3>
                   <p className="text-muted-foreground text-sm md:text-base leading-relaxed max-w-[90%] mx-auto">
@@ -83,7 +81,7 @@ export function SignatureDishes() {
         </div>
         
         <div className="mt-20 text-center">
-            <Button asChild variant="outline" size="lg" className="border-primary text-primary hover:bg-primary hover:text-white px-12 h-14 uppercase font-bold tracking-widest transition-all">
+            <Button asChild variant="outline" size="lg" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground px-12 h-14 uppercase font-bold tracking-widest transition-all">
                 <Link href="/#gallery">View Full Menu</Link>
             </Button>
         </div>
