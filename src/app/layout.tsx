@@ -9,7 +9,11 @@ export const metadata: Metadata = {
   title: 'Trivandrum Café',
   description: 'Authentic South Indian Flavors in Nagpur',
   icons: {
-    icon: 'https://exlaucgslmfiakllbtnq.supabase.co/storage/v1/object/public/Additional/logo-removebg-preview.png',
+    icon: [
+      { url: 'https://exlaucgslmfiakllbtnq.supabase.co/storage/v1/object/public/Additional/logo-removebg-preview.png' },
+      { url: 'https://exlaucgslmfiakllbtnq.supabase.co/storage/v1/object/public/Additional/logo-removebg-preview.png', sizes: '32x32', type: 'image/png' },
+    ],
+    shortcut: 'https://exlaucgslmfiakllbtnq.supabase.co/storage/v1/object/public/Additional/logo-removebg-preview.png',
     apple: 'https://exlaucgslmfiakllbtnq.supabase.co/storage/v1/object/public/Additional/logo-removebg-preview.png',
   },
 };
