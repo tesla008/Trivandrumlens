@@ -1,20 +1,10 @@
 
 "use client";
 
-import * as React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { Card, CardContent } from "@/components/ui/card";
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-  type CarouselApi,
-} from "@/components/ui/carousel";
-import Autoplay from "embla-carousel-autoplay";
 import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
 
 const dishes = [
   {
@@ -26,6 +16,11 @@ const dishes = [
     name: "Idli Sambhar",
     description: "Piping hot, fluffy steamed rice cakes served with our signature vegetable stew.",
     image: "https://exlaucgslmfiakllbtnq.supabase.co/storage/v1/object/public/Additional/idliSambhar.JPG"
+  },
+  {
+    name: "Hyderabadi Mushroom Curry",
+    description: "A rich, creamy, and spicy mushroom delicacy from the heart of Hyderabad.",
+    image: "https://exlaucgslmfiakllbtnq.supabase.co/storage/v1/object/public/Additional/HyderabadiMushroomcurry.JPG"
   },
   {
     name: "Ghee Podi Thatte Idli",
@@ -45,76 +40,50 @@ const dishes = [
 ];
 
 export function SignatureDishes() {
-  const [api, setApi] = React.useState<CarouselApi>();
-  const [current, setCurrent] = React.useState(0);
-
-  React.useEffect(() => {
-    if (!api) return;
-
-    setCurrent(api.selectedScrollSnap());
-    api.on("select", () => {
-      setCurrent(api.selectedScrollSnap());
-    });
-  }, [api]);
-
   return (
-    <section id="specialties" className="py-20 md:py-32 bg-card">
-      <div className="container mx-auto px-4 md:px-6">
-        <div className="text-center mb-16 space-y-4">
-          <h3 className="text-primary font-bold uppercase tracking-widest text-sm">Chef's Recommendations</h3>
+    <section id="specialties" className="py-24 md:py-32 bg-background">
+      <div className="container mx-auto px-4 md:px-8">
+        <div className="text-center mb-20 space-y-4">
+          <h3 className="text-primary font-bold uppercase tracking-[0.2em] text-xs md:text-sm">Chef's Recommendations</h3>
           <h2 className="font-headline text-4xl md:text-6xl font-bold text-foreground">
-            Our Signature Dishes
+            Signature Specials
           </h2>
-          <p className="mt-4 text-lg text-foreground/80 max-w-2xl mx-auto">
-            Each dish is crafted with time-honored techniques and authentic spices.
+          <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+            Crafted with time-honored techniques and authentic spices sourced directly from South India.
           </p>
         </div>
 
-        <Carousel
-          setApi={setApi}
-          plugins={[
-            Autoplay({
-              delay: 5000,
-              stopOnInteraction: true,
-            }),
-          ]}
-          opts={{
-            loop: true,
-          }}
-          className="w-full max-w-5xl mx-auto"
-        >
-          <CarouselContent>
-            {dishes.map((dish, index) => (
-              <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3 p-4">
-                <div className="flex flex-col h-full bg-background rounded-3xl overflow-hidden shadow-lg border border-border/50 group">
-                  <div className="relative aspect-square overflow-hidden">
-                    <Image
-                      src={dish.image}
-                      alt={dish.name}
-                      fill
-                      className="object-cover transition-transform duration-500 group-hover:scale-110"
-                      sizes="(max-width: 768px) 100vw, 33vw"
-                      loading="lazy"
-                    />
-                  </div>
-                  <div className="p-8 text-center flex flex-col flex-grow">
-                    <h3 className="font-headline text-2xl font-bold text-foreground mb-3">
-                      {dish.name}
-                    </h3>
-                    <p className="text-muted-foreground text-sm leading-relaxed mb-6">
-                      {dish.description}
-                    </p>
-                  </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
+          {dishes.map((dish, index) => (
+            <Card key={index} className="group border-none bg-transparent shadow-none">
+              <CardContent className="p-0 space-y-6">
+                <div className="relative aspect-square overflow-hidden rounded-2xl shadow-md transition-all duration-500 group-hover:shadow-xl group-hover:-translate-y-1">
+                  <Image
+                    src={dish.image}
+                    alt={dish.name}
+                    fill
+                    className="object-cover transition-transform duration-700 group-hover:scale-110"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                    loading="lazy"
+                  />
+                  <div className="absolute inset-0 bg-black/5 group-hover:bg-black/0 transition-colors duration-500" />
                 </div>
-              </CarouselItem>
-            ))}
-          </CarouselContent>
-          <CarouselPrevious className="hidden md:flex -left-12 border-primary/20" />
-          <CarouselNext className="hidden md:flex -right-12 border-primary/20" />
-        </Carousel>
+                
+                <div className="space-y-2 text-center">
+                  <h3 className="font-headline text-2xl md:text-3xl font-bold text-foreground group-hover:text-primary transition-colors duration-300">
+                    {dish.name}
+                  </h3>
+                  <p className="text-muted-foreground text-sm md:text-base leading-relaxed max-w-[90%] mx-auto">
+                    {dish.description}
+                  </p>
+                </div>
+              </CardContent>
+            </Card>
+          ))}
+        </div>
         
-        <div className="mt-16 text-center">
-            <Button asChild variant="outline" size="lg" className="border-primary text-primary hover:bg-primary hover:text-white px-10 h-14 uppercase font-bold tracking-widest">
+        <div className="mt-20 text-center">
+            <Button asChild variant="outline" size="lg" className="border-primary text-primary hover:bg-primary hover:text-white px-12 h-14 uppercase font-bold tracking-widest transition-all">
                 <Link href="/#gallery">View Full Menu</Link>
             </Button>
         </div>
