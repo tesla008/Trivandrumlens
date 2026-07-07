@@ -3,7 +3,7 @@
 import Image from 'next/image';
 import { useState } from 'react';
 import { Card, CardContent } from '@/components/ui/card';
-import { Dialog, DialogContent } from '@/components/ui/dialog';
+import { Dialog, DialogContent, DialogTitle, DialogDescription } from '@/components/ui/dialog';
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel';
 import { Button } from '@/components/ui/button';
 import { X, Eye, ImageOff } from 'lucide-react';
@@ -83,6 +83,10 @@ export function MenuCards() {
 
       <Dialog open={isOpen} onOpenChange={setIsOpen}>
         <DialogContent className="max-w-none w-screen h-screen bg-black/95 border-0 shadow-none p-0 flex items-center justify-center">
+            <div className="sr-only">
+              <DialogTitle>Menu Image Viewer</DialogTitle>
+              <DialogDescription>Full screen view of our menu cards.</DialogDescription>
+            </div>
             <Carousel 
                 key={startIndex}
                 opts={{ loop: true, startIndex: startIndex }} 
