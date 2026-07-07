@@ -1,7 +1,9 @@
+
 "use client";
 
 import * as React from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { Card, CardContent } from "@/components/ui/card";
 import {
   Carousel,
@@ -12,36 +14,32 @@ import {
   type CarouselApi,
 } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
+import { Button } from "@/components/ui/button";
 
 const dishes = [
   {
     name: "Punugulu",
-    description: "Crispy deep-fried rice and lentil batter balls.",
+    description: "Crispy deep-fried rice and lentil batter balls, a perfect tea-time snack.",
     image: "https://exlaucgslmfiakllbtnq.supabase.co/storage/v1/object/public/Additional/Punugulu.jpeg"
   },
   {
     name: "Idli Sambhar",
-    description: "Steamed rice cakes served with flavorful lentil-based vegetable stew.",
+    description: "Piping hot, fluffy steamed rice cakes served with our signature vegetable stew.",
     image: "https://exlaucgslmfiakllbtnq.supabase.co/storage/v1/object/public/Additional/idliSambhar.JPG"
   },
   {
-    name: "Hyderabadi Mushroom Curry",
-    description: "A rich and aromatic mushroom curry from Hyderabadi cuisine.",
-    image: "https://exlaucgslmfiakllbtnq.supabase.co/storage/v1/object/public/Additional/HyderabadiMushroomcurry.JPG"
-  },
-  {
     name: "Ghee Podi Thatte Idli",
-    description: "Large, plate-sized idlis generously topped with ghee and podi.",
+    description: "Plate-sized idlis soaked in golden ghee and sprinkled with aromatic spicy podi.",
     image: "https://exlaucgslmfiakllbtnq.supabase.co/storage/v1/object/public/Additional/GheePodiThatteIdli.JPG"
   },
   {
     name: "Sambhar Vada",
-    description: "Savory lentil donuts soaked in hot, tangy sambar.",
+    description: "Crispy, savory lentil donuts perfectly paired with tangy sambar.",
     image: "https://exlaucgslmfiakllbtnq.supabase.co/storage/v1/object/public/Additional/Sambharvada.JPG"
   },
   {
     name: "Lemon Rice",
-    description: "A tangy and flavorful rice dish with lemon, peanuts, and spices.",
+    description: "Zesty, peanut-infused rice that's both comforting and flavorful.",
     image: "https://exlaucgslmfiakllbtnq.supabase.co/storage/v1/object/public/Additional/Lemontice.JPG"
   }
 ];
@@ -62,12 +60,13 @@ export function SignatureDishes() {
   return (
     <section id="specialties" className="py-20 md:py-32 bg-card">
       <div className="container mx-auto px-4 md:px-6">
-        <div className="text-center mb-16">
-          <h2 className="font-headline text-4xl md:text-5xl font-bold text-primary">
+        <div className="text-center mb-16 space-y-4">
+          <h3 className="text-primary font-bold uppercase tracking-widest text-sm">Chef's Recommendations</h3>
+          <h2 className="font-headline text-4xl md:text-6xl font-bold text-foreground">
             Our Signature Dishes
           </h2>
           <p className="mt-4 text-lg text-foreground/80 max-w-2xl mx-auto">
-            A taste of authentic South Indian tradition.
+            Each dish is crafted with time-honored techniques and authentic spices.
           </p>
         </div>
 
@@ -77,35 +76,32 @@ export function SignatureDishes() {
             Autoplay({
               delay: 5000,
               stopOnInteraction: true,
-              stopOnMouseEnter: true,
             }),
           ]}
           opts={{
             loop: true,
           }}
-          className="w-full max-w-4xl mx-auto"
+          className="w-full max-w-5xl mx-auto"
         >
           <CarouselContent>
             {dishes.map((dish, index) => (
-              <CarouselItem key={index}>
-                <div className="flex flex-col items-center text-center">
-                  <Card className="overflow-hidden group rounded-lg shadow-lg max-w-lg w-full border-none bg-transparent">
-                    <CardContent className="p-0 relative aspect-square">
-                      <Image
-                        src={dish.image}
-                        alt={dish.name}
-                        fill
-                        className="object-contain transition-transform duration-500 group-hover:scale-105"
-                        priority={index === 0}
-                        sizes="(max-width: 768px) 80vw, 512px"
-                      />
-                    </CardContent>
-                  </Card>
-                  <div className="mt-6">
-                    <h3 className="font-headline text-2xl md:text-3xl font-semibold text-foreground">
+              <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3 p-4">
+                <div className="flex flex-col h-full bg-background rounded-3xl overflow-hidden shadow-lg border border-border/50 group">
+                  <div className="relative aspect-square overflow-hidden">
+                    <Image
+                      src={dish.image}
+                      alt={dish.name}
+                      fill
+                      className="object-cover transition-transform duration-500 group-hover:scale-110"
+                      sizes="(max-width: 768px) 100vw, 33vw"
+                      loading="lazy"
+                    />
+                  </div>
+                  <div className="p-8 text-center flex flex-col flex-grow">
+                    <h3 className="font-headline text-2xl font-bold text-foreground mb-3">
                       {dish.name}
                     </h3>
-                    <p className="mt-2 text-md text-muted-foreground max-w-md mx-auto">
+                    <p className="text-muted-foreground text-sm leading-relaxed mb-6">
                       {dish.description}
                     </p>
                   </div>
@@ -113,21 +109,14 @@ export function SignatureDishes() {
               </CarouselItem>
             ))}
           </CarouselContent>
-          <CarouselPrevious className="absolute left-0 md:-left-16 top-1/2 -translate-y-1/2 h-12 w-12 rounded-full bg-background/50 hover:bg-background border-border text-foreground" />
-          <CarouselNext className="absolute right-0 md:-right-16 top-1/2 -translate-y-1/2 h-12 w-12 rounded-full bg-background/50 hover:bg-background border-border text-foreground" />
+          <CarouselPrevious className="hidden md:flex -left-12 border-primary/20" />
+          <CarouselNext className="hidden md:flex -right-12 border-primary/20" />
         </Carousel>
         
-        <div className="flex justify-center gap-2 mt-8">
-            {dishes.map((_, index) => (
-                <button
-                    key={index}
-                    onClick={() => api?.scrollTo(index)}
-                    className={`h-2 rounded-full transition-all duration-300 ${
-                        current === index ? "w-6 bg-primary" : "w-2 bg-primary/30 hover:bg-primary/50"
-                    }`}
-                    aria-label={`Go to slide ${index + 1}`}
-                />
-            ))}
+        <div className="mt-16 text-center">
+            <Button asChild variant="outline" size="lg" className="border-primary text-primary hover:bg-primary hover:text-white px-10 h-14 uppercase font-bold tracking-widest">
+                <Link href="/#gallery">View Full Menu</Link>
+            </Button>
         </div>
       </div>
     </section>

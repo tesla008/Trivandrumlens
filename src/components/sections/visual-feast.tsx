@@ -1,3 +1,4 @@
+
 "use client";
 
 import * as React from "react";
@@ -11,8 +12,9 @@ import {
   CarouselPrevious,
   type CarouselApi,
 } from "@/components/ui/carousel";
-import { MapPin } from "lucide-react";
+import { MapPin, Navigation } from "lucide-react";
 import Autoplay from "embla-carousel-autoplay";
+import { Button } from "@/components/ui/button";
 
 const outlets = [
   {
@@ -49,14 +51,15 @@ export function VisualFeast() {
   }, [api]);
 
   return (
-    <section id="locations" className="pt-20 md:pt-24 bg-card">
+    <section id="locations" className="py-20 md:py-32 bg-primary/5">
       <div className="container mx-auto px-4 md:px-6">
-        <div className="text-center mb-16">
-          <h2 className="font-headline text-4xl md:text-5xl font-bold text-primary">
+        <div className="text-center mb-16 space-y-4">
+          <h3 className="text-primary font-bold uppercase tracking-widest text-sm">Where to find us</h3>
+          <h2 className="font-headline text-4xl md:text-6xl font-bold text-foreground">
             Our Locations
           </h2>
-          <p className="mt-4 text-lg text-foreground/80 max-w-2xl mx-auto">
-            Explore our outlets across Nagpur.
+          <p className="mt-4 text-lg text-foreground/70 max-w-2xl mx-auto">
+            Experience the same authentic taste across all our outlets in Nagpur.
           </p>
         </div>
 
@@ -66,61 +69,56 @@ export function VisualFeast() {
             Autoplay({
               delay: 4500,
               stopOnInteraction: true,
-              stopOnMouseEnter: true,
             }),
           ]}
           opts={{
             loop: true,
           }}
-          className="w-full max-w-4xl mx-auto"
+          className="w-full max-w-5xl mx-auto"
         >
           <CarouselContent>
             {outlets.map((outlet, index) => (
-              <CarouselItem key={index}>
-                <div className="flex flex-col items-center text-center">
-                  <Card className="overflow-hidden group rounded-lg shadow-lg w-full border-none bg-transparent">
-                    <CardContent className="p-0 relative aspect-video">
-                      <Image
-                        src={outlet.src}
-                        alt={outlet.alt}
-                        fill
-                        className="object-cover group-hover:scale-105 transition-transform duration-500"
-                        priority={index === 0}
-                        sizes="(max-width: 1024px) 90vw, 896px"
-                        quality={95}
-                      />
-                    </CardContent>
-                  </Card>
-                  <div className="mt-6">
-                    <h3 className="flex items-center justify-center gap-3 font-semibold text-2xl md:text-3xl text-foreground tracking-wide">
-                      <MapPin className="h-6 w-6 text-primary flex-shrink-0" />
-                      <span>{outlet.name}</span>
-                    </h3>
-                    <a
-                      href={outlet.mapLink}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-1.5 mt-2 text-sm text-foreground/80 hover:text-primary transition-colors group/link"
-                    >
-                      View on Map
-                      <span aria-hidden="true" className="transition-transform group-hover/link:translate-x-1">→</span>
-                    </a>
+              <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3 p-4">
+                <Card className="overflow-hidden group rounded-2xl shadow-xl border-none h-full flex flex-col">
+                  <div className="relative aspect-[4/3] overflow-hidden">
+                    <Image
+                      src={outlet.src}
+                      alt={outlet.alt}
+                      fill
+                      className="object-cover group-hover:scale-105 transition-transform duration-700"
+                      sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                      loading="lazy"
+                    />
                   </div>
-                </div>
+                  <CardContent className="p-6 flex flex-col flex-grow bg-card">
+                    <div className="flex items-start gap-3 mb-6">
+                      <MapPin className="h-5 w-5 text-primary shrink-0 mt-1" />
+                      <h3 className="font-bold text-xl text-foreground tracking-tight">
+                        {outlet.name}
+                      </h3>
+                    </div>
+                    <Button asChild variant="default" className="w-full mt-auto bg-primary hover:bg-primary/90">
+                      <a href={outlet.mapLink} target="_blank" rel="noopener noreferrer">
+                        <Navigation className="mr-2 h-4 w-4" />
+                        Get Directions
+                      </a>
+                    </Button>
+                  </CardContent>
+                </Card>
               </CarouselItem>
             ))}
           </CarouselContent>
-          <CarouselPrevious className="absolute left-0 md:-left-16 top-1/2 -translate-y-1/2 mt-[-50px] h-12 w-12 rounded-full bg-background/50 hover:bg-background border-border text-foreground" />
-          <CarouselNext className="absolute right-0 md:-right-16 top-1/2 -translate-y-1/2 mt-[-50px] h-12 w-12 rounded-full bg-background/50 hover:bg-background border-border text-foreground" />
+          <CarouselPrevious className="hidden md:flex -left-12 bg-background border-primary/20 text-primary" />
+          <CarouselNext className="hidden md:flex -right-12 bg-background border-primary/20 text-primary" />
         </Carousel>
 
-        <div className="flex justify-center gap-2 mt-8">
+        <div className="flex justify-center gap-2 mt-12">
             {outlets.map((_, index) => (
                 <button
                     key={index}
                     onClick={() => api?.scrollTo(index)}
                     className={`h-2 rounded-full transition-all duration-300 ${
-                        current === index ? "w-6 bg-primary" : "w-2 bg-primary/30 hover:bg-primary/50"
+                        current === index ? "w-8 bg-primary" : "w-2 bg-primary/20 hover:bg-primary/40"
                     }`}
                     aria-label={`Go to slide ${index + 1}`}
                 />

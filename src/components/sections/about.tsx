@@ -1,49 +1,57 @@
+
 import Image from "next/image";
-import { PlaceHolderImages } from "@/lib/placeholder-images";
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
 import { Check } from "lucide-react";
 
 export function About() {
-  const bgImage = PlaceHolderImages.find(img => img.id === 'about-exterior');
-
   return (
-    <section id="about" className="relative py-20 md:py-32">
-      {bgImage && (
-        <Image
-          src={bgImage.imageUrl}
-          alt={bgImage.description}
-          fill
-          className="object-cover"
-          data-ai-hint={bgImage.imageHint}
-        />
-      )}
-      <div className="absolute inset-0 bg-background/80 backdrop-blur-sm" />
-      <div className="relative container mx-auto px-4 md:px-6">
-        <div className="grid md:grid-cols-2 gap-12 items-center">
-          <div>
-            <h2 className="font-headline text-4xl md:text-5xl font-bold text-primary">About Trivandrum Café</h2>
-            <p className="mt-6 text-lg text-foreground/80 leading-relaxed">
-              Nestled in the heart of Nagpur, Trivandrum Café is a sanctuary for lovers of authentic South Indian cuisine. Our journey began with a simple mission: to bring the traditional flavors and warm hospitality of Southern India to our community.
-            </p>
-            <p className="mt-4 text-lg text-foreground/80 leading-relaxed">
-              Every dish is a celebration of age-old recipes, prepared with passion and the finest ingredients. From our crispy, golden-brown dosas to our fluffy idlis and aromatic filter coffee, we are dedicated to providing a dining experience that is both memorable and deeply satisfying.
-            </p>
+    <section id="about" className="py-20 md:py-32 bg-background overflow-hidden">
+      <div className="container mx-auto px-4 md:px-6">
+        <div className="grid md:grid-cols-2 gap-12 lg:gap-20 items-center">
+          <div className="relative aspect-square md:aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl">
+            <Image
+              src="https://exlaucgslmfiakllbtnq.supabase.co/storage/v1/object/public/Additional/AMB1.JPG"
+              alt="Trivandrum Café Ambience"
+              fill
+              className="object-cover"
+              loading="lazy"
+            />
+            <div className="absolute inset-0 bg-primary/10 mix-blend-overlay" />
           </div>
-          <div className="p-8 bg-primary/10 rounded-lg shadow-lg backdrop-blur-sm">
-            <h3 className="font-headline text-2xl text-primary mb-4">Our Promise</h3>
-            <ul className="space-y-3 text-foreground">
-                <li className="flex items-start gap-3">
-                    <Check className="text-primary mt-1 h-5 w-5 flex-shrink-0" />
-                    <span><strong>Authentic Recipes:</strong> Honoring the culinary traditions passed down through generations.</span>
+          
+          <div className="space-y-8">
+            <div className="space-y-4">
+              <h3 className="text-primary font-bold uppercase tracking-widest text-sm">Our Story</h3>
+              <h2 className="font-headline text-4xl md:text-6xl font-bold text-foreground leading-tight">
+                Rooted in Tradition, <br /> Served with <span className="text-primary">Love.</span>
+              </h2>
+            </div>
+            
+            <p className="text-lg text-foreground/80 leading-relaxed max-w-xl">
+              Trivandrum Café was born from a simple mission: to bring the true, unadulterated flavors of South Indian homes to the heart of Nagpur. Every recipe is a celebration of heritage, crafted with ingredients sourced directly from the South to maintain that signature authenticity.
+            </p>
+            
+            <ul className="space-y-4 text-foreground">
+                <li className="flex items-start gap-4">
+                    <div className="bg-primary/10 p-1 rounded-full mt-1">
+                      <Check className="text-primary h-4 w-4" />
+                    </div>
+                    <span className="text-lg"><strong>Authentic Sourcing:</strong> Rice, coffee, and spices from Southern India.</span>
                 </li>
-                <li className="flex items-start gap-3">
-                    <Check className="text-primary mt-1 h-5 w-5 flex-shrink-0" />
-                    <span><strong>Fresh Ingredients:</strong> Sourcing the best local and seasonal produce for vibrant flavors.</span>
-                </li>
-                <li className="flex items-start gap-3">
-                    <Check className="text-primary mt-1 h-5 w-5 flex-shrink-0" />
-                    <span><strong>Warm Hospitality:</strong> Creating a cozy and welcoming environment for all our guests.</span>
+                <li className="flex items-start gap-4">
+                    <div className="bg-primary/10 p-1 rounded-full mt-1">
+                      <Check className="text-primary h-4 w-4" />
+                    </div>
+                    <span className="text-lg"><strong>Generational Recipes:</strong> Time-honored cooking methods.</span>
                 </li>
             </ul>
+
+            <div className="pt-4 flex items-center gap-6">
+              <Button asChild variant="default" size="lg" className="bg-primary text-primary-foreground font-bold px-8 uppercase tracking-wide">
+                <Link href="/about">Our Full Story</Link>
+              </Button>
+            </div>
           </div>
         </div>
       </div>
