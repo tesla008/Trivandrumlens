@@ -10,8 +10,9 @@ export const metadata: Metadata = {
   description: 'Authentic South Indian Flavors in Nagpur',
   icons: {
     icon: [
-      { url: 'https://exlaucgslmfiakllbtnq.supabase.co/storage/v1/object/public/Additional/logo-removebg-preview.png' },
+      { url: 'https://exlaucgslmfiakllbtnq.supabase.co/storage/v1/object/public/Additional/logo-removebg-preview.png', type: 'image/png' },
       { url: 'https://exlaucgslmfiakllbtnq.supabase.co/storage/v1/object/public/Additional/logo-removebg-preview.png', sizes: '32x32', type: 'image/png' },
+      { url: 'https://exlaucgslmfiakllbtnq.supabase.co/storage/v1/object/public/Additional/logo-removebg-preview.png', sizes: '16x16', type: 'image/png' },
     ],
     shortcut: 'https://exlaucgslmfiakllbtnq.supabase.co/storage/v1/object/public/Additional/logo-removebg-preview.png',
     apple: 'https://exlaucgslmfiakllbtnq.supabase.co/storage/v1/object/public/Additional/logo-removebg-preview.png',
@@ -29,6 +30,8 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Oswald:wght@700&display=swap" rel="stylesheet" />
+        {/* Force override any legacy favicon.ico */}
+        <link rel="icon" href="https://exlaucgslmfiakllbtnq.supabase.co/storage/v1/object/public/Additional/logo-removebg-preview.png" />
       </head>
       <body className="font-body antialiased">
           <Header />
