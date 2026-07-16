@@ -82,7 +82,7 @@ export function SignatureDishes() {
         
         <div className="mt-20 text-center">
             <Button asChild variant="outline" size="lg" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground px-12 h-14 uppercase font-bold tracking-widest transition-all">
-                <Link href="/#gallery">View Full Menu</Link>
+                <Link href="/#menu">View Full Menu</Link>
             </Button>
         </div>
       </div>
