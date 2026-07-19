@@ -10,6 +10,7 @@ import { Gallery } from "@/components/sections/gallery";
 import { Reviews } from "@/components/sections/reviews";
 import { Faq } from "@/components/sections/faq";
 import { Marquee } from "@/components/sections/marquee";
+import { InfluencerVideos } from "@/components/sections/influencer-videos";
 
 export default function Home() {
   return (
@@ -22,6 +23,7 @@ export default function Home() {
       <div id="specialties">
         <SignatureDishes />
       </div>
+      <InfluencerVideos />
       <MenuCards />
       <div id="locations">
         <VisualFeast />

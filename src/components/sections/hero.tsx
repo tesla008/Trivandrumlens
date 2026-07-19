@@ -1,3 +1,4 @@
+
 "use client";
 
 import Link from 'next/link';
@@ -56,6 +57,9 @@ export function Hero() {
             </Button>
             <Button asChild variant="outline" size="lg" className="border-border text-foreground bg-background hover:bg-white backdrop-blur-sm text-lg px-12 h-16 uppercase font-bold tracking-wider transition-colors">
               <Link href="#locations">View Locations</Link>
+            </Button>
+            <Button asChild size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 shadow-lg text-lg px-12 h-16 uppercase font-bold tracking-wider">
+              <a href="https://forms.gle/42hVF8SDbmEg9MLG7" target="_blank" rel="noopener noreferrer">Apply Franchise</a>
             </Button>
           </div>
         </div>

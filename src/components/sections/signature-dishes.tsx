@@ -1,3 +1,4 @@
+
 "use client";
 
 import Image from "next/image";
@@ -7,19 +8,24 @@ import { Card, CardContent } from "@/components/ui/card";
 
 const dishes = [
   {
+    name: "Dosa",
+    description: "Thin, crispy South Indian crepes served with aromatic sambar and a variety of chutneys.",
+    image: "https://exlaucgslmfiakllbtnq.supabase.co/storage/v1/object/public/Additional/Dosa.jpeg"
+  },
+  {
     name: "Punugulu",
     description: "Crispy deep-fried rice and lentil batter balls, a perfect tea-time snack.",
     image: "https://exlaucgslmfiakllbtnq.supabase.co/storage/v1/object/public/Additional/Punugulu.jpeg"
   },
   {
-    name: "Idli Sambhar",
-    description: "Piping hot, fluffy steamed rice cakes served with our signature vegetable stew.",
-    image: "https://exlaucgslmfiakllbtnq.supabase.co/storage/v1/object/public/Additional/idliSambhar.JPG"
+    name: "Mushroom Curry",
+    description: "A rich, creamy, and spicy mushroom delicacy prepared with traditional South Indian spices.",
+    image: "https://exlaucgslmfiakllbtnq.supabase.co/storage/v1/object/public/Additional/mushroomcurry.jpeg"
   },
   {
-    name: "Hyderabadi Mushroom Curry",
-    description: "A rich, creamy, and spicy mushroom delicacy from the heart of Hyderabad.",
-    image: "https://exlaucgslmfiakllbtnq.supabase.co/storage/v1/object/public/Additional/HyderabadiMushroomcurry.JPG"
+    name: "Ghee Roast Paneer",
+    description: "Succulent paneer cubes tossed in a fiery, aromatic ghee-based spice mix.",
+    image: "https://exlaucgslmfiakllbtnq.supabase.co/storage/v1/object/public/Additional/gheeroast.jpeg"
   },
   {
     name: "Ghee Podi Thatte Idli",
@@ -30,11 +36,6 @@ const dishes = [
     name: "Sambhar Vada",
     description: "Crispy, savory lentil donuts perfectly paired with tangy sambar.",
     image: "https://exlaucgslmfiakllbtnq.supabase.co/storage/v1/object/public/Additional/Sambharvada.JPG"
-  },
-  {
-    name: "Lemon Rice",
-    description: "Zesty, peanut-infused rice that's both comforting and flavorful.",
-    image: "https://exlaucgslmfiakllbtnq.supabase.co/storage/v1/object/public/Additional/Lemontice.JPG"
   }
 ];
 
