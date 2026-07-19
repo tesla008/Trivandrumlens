@@ -1,8 +1,10 @@
+
 "use client";
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import { usePathname } from 'next/navigation';
 import { cn } from '@/lib/utils';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
@@ -20,6 +22,11 @@ const navLinks = [
 export function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const pathname = usePathname();
+
+  const isHome = pathname === '/';
+  // On subpages, we show the scrolled state (background and logo) immediately for better visibility
+  const shouldShowBackground = isScrolled || !isHome;
 
   useEffect(() => {
     const handleScroll = () => {
@@ -32,7 +39,7 @@ export function Header() {
   return (
     <header className={cn(
       "fixed top-0 left-0 right-0 z-50 transition-all duration-300 h-20 flex items-center",
-      isScrolled ? "bg-background/95 backdrop-blur-md border-b shadow-sm h-16" : "bg-transparent h-20"
+      shouldShowBackground ? "bg-background/95 backdrop-blur-md border-b shadow-sm h-16" : "bg-transparent h-20"
     )}>
       <div className="container mx-auto flex items-center justify-between px-4 md:px-6">
         
@@ -40,7 +47,7 @@ export function Header() {
           href="/" 
           className={cn(
             "transition-all duration-300 ease-in-out flex items-center",
-            isScrolled ? "opacity-100 scale-90 translate-x-0" : "opacity-0 -translate-x-4 pointer-events-none"
+            shouldShowBackground ? "opacity-100 scale-90 translate-x-0" : "opacity-0 -translate-x-4 pointer-events-none"
           )}
         >
           <Image
@@ -60,7 +67,8 @@ export function Header() {
               href={link.href}
               className={cn(
                 "font-bold text-sm uppercase tracking-widest transition-colors",
-                isScrolled ? "text-foreground/80 hover:text-primary" : "text-white/90 hover:text-white"
+                shouldShowBackground ? "text-foreground/80 hover:text-primary" : "text-white/90 hover:text-white",
+                pathname === link.href && "text-primary"
               )}
             >
               {link.label}
@@ -72,7 +80,7 @@ export function Header() {
           <div className="md:hidden">
             <Sheet open={isMobileMenuOpen} onOpenChange={setIsMobileMenuOpen}>
               <SheetTrigger asChild>
-                <Button variant="ghost" size="icon" className={cn(isScrolled ? "text-foreground" : "text-white")}>
+                <Button variant="ghost" size="icon" className={cn(shouldShowBackground ? "text-foreground" : "text-white")}>
                   <MenuIcon className="h-7 w-7" />
                   <span className="sr-only">Open menu</span>
                 </Button>
@@ -93,7 +101,10 @@ export function Header() {
                       <Link
                         key={link.href}
                         href={link.href}
-                        className="text-xl font-bold text-foreground/80 hover:text-primary uppercase tracking-wider"
+                        className={cn(
+                          "text-xl font-bold uppercase tracking-wider transition-colors",
+                          pathname === link.href ? "text-primary" : "text-foreground/80 hover:text-primary"
+                        )}
                         onClick={() => setIsMobileMenuOpen(false)}
                       >
                         {link.label}
