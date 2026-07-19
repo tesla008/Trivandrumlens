@@ -6,7 +6,8 @@ const menuItems = [
   'Sambhar Vada',
   'Ghee Podi Thatte Idli',
   'Lemon Rice',
-  'Punugulu'
+  'Punugulu',
+  'Ghee Roast Paneer'
 ];
 
 const MarqueeContent = () => (
