@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { Check, Leaf, Heart, Sparkles, Instagram } from 'lucide-react';
+import { Leaf, Heart, Sparkles, UtensilsCrossed, Instagram } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 
@@ -9,10 +9,10 @@ export default function AboutPage() {
     <div className="bg-background text-foreground">
       {/* Hero Section */}
       <section className="relative pt-40 pb-24 md:pt-56 md:pb-40 bg-black overflow-hidden">
-        <div className="absolute inset-0 opacity-40">
+        <div className="absolute inset-0 opacity-50">
            <Image 
             src="https://exlaucgslmfiakllbtnq.supabase.co/storage/v1/object/public/Additional/AMB1.JPG" 
-            alt="Authentic Ambience"
+            alt="Authentic Trivandrum Ambience"
             fill
             className="object-cover"
             priority
@@ -23,8 +23,8 @@ export default function AboutPage() {
           <h1 className="font-headline text-5xl md:text-8xl font-bold uppercase tracking-tighter leading-none mb-6">
             Taste Tradition.<br /> <span className="text-primary">Taste Trivandrum.</span>
           </h1>
-          <p className="text-lg md:text-2xl font-medium max-w-3xl mx-auto text-white/90 leading-relaxed italic">
-            A destination for authentic Kerala cuisine, traditional recipes, and hospitality that feels like home.
+          <p className="text-lg md:text-2xl font-medium max-w-2xl mx-auto text-white/90 leading-relaxed italic">
+            Bringing authentic Kerala flavours and warm hospitality from the heart of the South to the soul of Nagpur.
           </p>
         </div>
       </section>
@@ -36,124 +36,112 @@ export default function AboutPage() {
             <div className="relative aspect-square md:aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl">
               <Image
                 src="https://exlaucgslmfiakllbtnq.supabase.co/storage/v1/object/public/Additional/AMB3.JPG"
-                alt="The Story of Trivandrum Cafe"
+                alt="The Story of Akhil and Vandana"
                 fill
                 className="object-cover"
               />
             </div>
             <div className="space-y-8">
               <div className="space-y-4">
-                <h3 className="text-primary font-bold uppercase tracking-widest text-sm">Our Story</h3>
+                <h3 className="text-primary font-bold uppercase tracking-widest text-sm">Our Journey</h3>
                 <h2 className="font-headline text-4xl md:text-6xl font-bold leading-tight">
-                  A Legacy of <br /> <span className="text-primary">Kerala Roots.</span>
+                  From Passion <br /> <span className="text-primary">to Plate.</span>
                 </h2>
               </div>
               <div className="space-y-6 text-lg text-foreground/80 leading-relaxed">
                 <p>
-                  Trivandrum Café was born from a deep-seated passion for the culinary heritage of Kerala. Our journey began with a simple mission: to share the vibrant, unadulterated flavors of home with the people of Nagpur.
+                  Trivandrum Café is the realization of a shared dream by Akhil and Vandana. Driven by a deep-seated passion for the vibrant culinary heritage of Kerala, they set out to create more than just a restaurant—they wanted to share the soulful, unadulterated flavours of home.
                 </p>
                 <p>
-                  Every recipe in our kitchen is a tribute to tradition, passed down through generations. We source our spices and core ingredients directly from Kerala to ensure that every bite of our Ghee Podi Dosa or sip of Filter Coffee transports you to the South.
+                  What started as a small, dedicated food counter has blossomed into the Trivandrum Café you see today. Their journey is fueled by a love for authentic ingredients and the genuine joy of serving hospitality that feels like family.
                 </p>
-                <p>
-                  From our commitment to fresh ingredients to our traditional cooking methods, we strive for consistency and quality that makes every guest feel like part of the family.
-                </p>
+                <div className="pt-4 border-l-4 border-primary pl-6">
+                  <h4 className="font-headline text-2xl font-bold mb-2 text-foreground">Why Trivandrum?</h4>
+                  <p className="italic">
+                    The name is a tribute to Akhil's childhood memories. It was in the streets of Trivandrum that he first fell in love with the aromatic spices and traditional recipes of the South. This café is his tribute to those unforgettable flavours.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Our Philosophy Section */}
+      {/* Values Section */}
       <section className="py-24 md:py-32 bg-primary/5">
         <div className="container mx-auto px-4 md:px-6">
           <div className="text-center mb-16 space-y-4">
-            <h3 className="text-primary font-bold uppercase tracking-widest text-sm">The Foundation</h3>
-            <h2 className="font-headline text-4xl md:text-5xl font-bold">Our Philosophy</h2>
+            <h3 className="text-primary font-bold uppercase tracking-widest text-sm">What We Stand For</h3>
+            <h2 className="font-headline text-4xl md:text-5xl font-bold">Our Core Values</h2>
           </div>
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
             <Card className="bg-card border-none shadow-lg text-center p-8 rounded-2xl">
               <div className="mx-auto bg-primary/10 w-16 h-16 rounded-full flex items-center justify-center mb-6">
                 <Leaf className="text-primary h-8 w-8" />
               </div>
-              <CardTitle className="font-headline text-2xl mb-4">Authentic Kerala Flavours</CardTitle>
-              <p className="text-foreground/70">Using time-honored techniques and spices sourced from the heart of the South.</p>
+              <CardTitle className="font-headline text-xl mb-4 uppercase tracking-tight">Authentic Kerala Flavours</CardTitle>
+              <p className="text-foreground/70 text-sm">Time-honored recipes sourced directly from the heart of the South.</p>
             </Card>
             <Card className="bg-card border-none shadow-lg text-center p-8 rounded-2xl">
               <div className="mx-auto bg-primary/10 w-16 h-16 rounded-full flex items-center justify-center mb-6">
                 <Sparkles className="text-primary h-8 w-8" />
               </div>
-              <CardTitle className="font-headline text-2xl mb-4">Fresh & Premium Ingredients</CardTitle>
-              <p className="text-foreground/70">Quality without compromise, from farm-fresh produce to premium Kerala rice.</p>
+              <CardTitle className="font-headline text-xl mb-4 uppercase tracking-tight">Fresh Ingredients</CardTitle>
+              <p className="text-foreground/70 text-sm">Quality without compromise, from farm-fresh produce to premium spices.</p>
             </Card>
             <Card className="bg-card border-none shadow-lg text-center p-8 rounded-2xl">
               <div className="mx-auto bg-primary/10 w-16 h-16 rounded-full flex items-center justify-center mb-6">
                 <Heart className="text-primary h-8 w-8" />
               </div>
-              <CardTitle className="font-headline text-2xl mb-4">Hospitality from the Heart</CardTitle>
-              <p className="text-foreground/70">Serving every guest with warmth and genuine care, just like we would at home.</p>
+              <CardTitle className="font-headline text-xl mb-4 uppercase tracking-tight">Warm Hospitality</CardTitle>
+              <p className="text-foreground/70 text-sm">Serving every guest with genuine care, making you feel right at home.</p>
+            </Card>
+            <Card className="bg-card border-none shadow-lg text-center p-8 rounded-2xl">
+              <div className="mx-auto bg-primary/10 w-16 h-16 rounded-full flex items-center justify-center mb-6">
+                <UtensilsCrossed className="text-primary h-8 w-8" />
+              </div>
+              <CardTitle className="font-headline text-xl mb-4 uppercase tracking-tight">Quality & Consistency</CardTitle>
+              <p className="text-foreground/70 text-sm">A commitment to excellence in every bite, every single day.</p>
             </Card>
           </div>
         </div>
       </section>
 
-      {/* Why Choose Us Section */}
-      <section className="py-24 md:py-32 bg-background">
+      {/* Women's Day Section */}
+      <section className="py-24 md:py-32">
         <div className="container mx-auto px-4 md:px-6">
-          <div className="grid md:grid-cols-2 gap-16 items-center">
-            <div className="space-y-10">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div className="space-y-6 order-2 md:order-1">
               <div className="space-y-4">
-                <h3 className="text-primary font-bold uppercase tracking-widest text-sm">Excellence in every bite</h3>
-                <h2 className="font-headline text-4xl md:text-5xl font-bold">Why Choose Us</h2>
+                <h3 className="text-primary font-bold uppercase tracking-widest text-sm">Community & Appreciation</h3>
+                <h2 className="font-headline text-4xl md:text-5xl font-bold leading-tight">
+                  Celebrating <br /> <span className="text-primary">Women's Day.</span>
+                </h2>
               </div>
-              <ul className="space-y-6">
-                {[
-                  "Authentic South Indian cuisine",
-                  "Traditional Kerala specialties",
-                  "Hygienic kitchen and fresh preparation",
-                  "Comfortable and inviting ambience",
-                  "Friendly and efficient service",
-                  "Perfect family dining experience"
-                ].map((point, index) => (
-                  <li key={index} className="flex items-center gap-4 group">
-                    <div className="bg-primary/20 p-1.5 rounded-full text-primary group-hover:bg-primary group-hover:text-white transition-all">
-                      <Check className="h-5 w-5" />
-                    </div>
-                    <span className="text-lg font-medium">{point}</span>
-                  </li>
-                ))}
-              </ul>
+              <p className="text-lg text-foreground/80 leading-relaxed">
+                At Trivandrum Café, we believe in the power of community and the strength of the individuals within it. Our Women's Day celebrations are a reflection of our deep appreciation for the incredible women who inspire us every day. We are proud to foster a warm, inclusive space where every story is celebrated and every contribution is valued.
+              </p>
             </div>
-            <div className="grid grid-cols-2 gap-4">
-              <div className="space-y-4 pt-12">
-                <div className="relative aspect-square rounded-2xl overflow-hidden shadow-lg">
-                  <Image src="https://exlaucgslmfiakllbtnq.supabase.co/storage/v1/object/public/Additional/pic1.png" alt="Food" fill className="object-cover" />
-                </div>
-                <div className="relative aspect-[3/4] rounded-2xl overflow-hidden shadow-lg">
-                  <Image src="https://exlaucgslmfiakllbtnq.supabase.co/storage/v1/object/public/Additional/AMB2.jpg" alt="Ambience" fill className="object-cover" />
-                </div>
-              </div>
-              <div className="space-y-4">
-                <div className="relative aspect-[3/4] rounded-2xl overflow-hidden shadow-lg">
-                  <Image src="https://exlaucgslmfiakllbtnq.supabase.co/storage/v1/object/public/Additional/pic3.png" alt="Families" fill className="object-cover" />
-                </div>
-                <div className="relative aspect-square rounded-2xl overflow-hidden shadow-lg">
-                  <Image src="https://exlaucgslmfiakllbtnq.supabase.co/storage/v1/object/public/Additional/GheePodiThatteIdli.JPG" alt="Dishes" fill className="object-cover" />
-                </div>
-              </div>
+            <div className="relative aspect-video md:aspect-square rounded-3xl overflow-hidden shadow-2xl order-1 md:order-2">
+              <Image
+                src="https://exlaucgslmfiakllbtnq.supabase.co/storage/v1/object/public/Additional/Women'sDayPic.jpeg"
+                alt="Women's Day Celebration at Trivandrum Cafe"
+                fill
+                className="object-cover"
+              />
             </div>
           </div>
         </div>
       </section>
 
-      {/* Closing Invitation Section */}
+      {/* Closing Invitation */}
       <section className="py-24 md:py-32 bg-primary/10">
         <div className="container mx-auto px-4 md:px-6 text-center">
           <h2 className="font-headline text-4xl md:text-6xl font-bold text-primary leading-tight mb-8">
-            Your Seat at the Table <br /> is Waiting.
+            Experience the Heart <br /> of Kerala.
           </h2>
           <p className="text-xl text-foreground/80 max-w-2xl mx-auto mb-10 leading-relaxed">
-            Experience the heart of Kerala in the soul of Nagpur. We invite you to join us for a meal that celebrates tradition, flavor, and family.
+            Your seat at the table is waiting. We invite you to join us for a meal that celebrates tradition, flavour, and family.
           </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
             <Button asChild size="lg" className="bg-primary text-primary-foreground text-lg px-12 h-16 uppercase font-bold tracking-widest">
