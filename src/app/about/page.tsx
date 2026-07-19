@@ -122,22 +122,13 @@ export default function AboutPage() {
                 At Trivandrum Café, we believe in the power of community and the strength of the individuals within it. Our Women's Day celebrations are a reflection of our deep appreciation for the incredible women who inspire us every day. We are proud to foster a warm, inclusive space where every story is celebrated and every contribution is valued.
               </p>
             </div>
-            <div className="space-y-8 order-1 md:order-2">
+            <div className="order-1 md:order-2">
               <div className="relative aspect-video md:aspect-square rounded-3xl overflow-hidden shadow-2xl">
                 <Image
                   src="https://exlaucgslmfiakllbtnq.supabase.co/storage/v1/object/public/Additional/Women'sDayPic.jpeg"
                   alt="Women's Day Celebration at Trivandrum Cafe"
                   fill
                   className="object-cover"
-                />
-              </div>
-              <div className="relative aspect-video rounded-3xl overflow-hidden shadow-2xl bg-black">
-                <video
-                  src="https://exlaucgslmfiakllbtnq.supabase.co/storage/v1/object/public/Additional/Womens'dayvideo.mp4"
-                  className="w-full h-full object-cover"
-                  controls
-                  playsInline
-                  preload="metadata"
                 />
               </div>
             </div>
