@@ -1,4 +1,3 @@
-
 "use client";
 
 import Link from 'next/link';
@@ -44,7 +43,7 @@ export function Hero() {
 
           <div className="space-y-4">
             <h1 className="font-headline text-5xl md:text-8xl font-bold tracking-tighter uppercase leading-[0.9] text-white" style={{ textShadow: '0 4px 20px rgba(0,0,0,0.8)'}}>
-              Taste the Authentic <br /> Flavors of <span className="text-primary">South India</span>
+              Taste Tradition, <br /> Taste <span className="text-primary">Trivandrum</span>
             </h1>
             <p className="text-lg md:text-2xl font-medium opacity-90 max-w-2xl leading-relaxed" style={{ textShadow: '0 2px 10px rgba(0,0,0,0.8)'}}>
               Experience tradition in every bite — from crispy golden dosas to freshly brewed filter coffee served in the heart of Nagpur.
