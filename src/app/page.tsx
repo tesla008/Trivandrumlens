@@ -1,4 +1,3 @@
-
 "use client";
 
 import { Hero } from "@/components/sections/hero";
@@ -11,6 +10,7 @@ import { Reviews } from "@/components/sections/reviews";
 import { Faq } from "@/components/sections/faq";
 import { Marquee } from "@/components/sections/marquee";
 import { InfluencerVideos } from "@/components/sections/influencer-videos";
+import { FoodCreators } from "@/components/sections/food-creators";
 
 export default function Home() {
   return (
@@ -20,6 +20,7 @@ export default function Home() {
       <div id="about">
         <About />
       </div>
+      <FoodCreators />
       <div id="specialties">
         <SignatureDishes />
       </div>
