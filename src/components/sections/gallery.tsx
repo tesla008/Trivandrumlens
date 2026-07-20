@@ -11,8 +11,7 @@ const familyImages = [
 const ambienceImages = [
     { id: 'amb-1', src: 'https://exlaucgslmfiakllbtnq.supabase.co/storage/v1/object/public/Additional/AMB1.JPG', alt: 'Interior of the cafe', title: 'Warm & Inviting' },
     { id: 'amb-2', src: 'https://exlaucgslmfiakllbtnq.supabase.co/storage/v1/object/public/Additional/AMB2.jpg', alt: 'Cafe seating area', title: 'Comfortable Seating' },
-    { id: 'amb-3', src: 'https://exlaucgslmfiakllbtnq.supabase.co/storage/v1/object/public/Additional/AMB3.JPG', alt: 'Cafe decor details', title: 'Authentic Touches' },
-    { id: 'amb-4', src: 'https://exlaucgslmfiakllbtnq.supabase.co/storage/v1/object/public/Additional/AMB4.jpg', alt: 'Cafe ambiance', title: 'Modern & Cozy' }
+    { id: 'amb-3', src: 'https://exlaucgslmfiakllbtnq.supabase.co/storage/v1/object/public/Additional/AMB3.JPG', alt: 'Cafe decor details', title: 'Authentic Touches' }
 ];
 
 const GalleryGrid = ({ images }: { images: { id: string; src: string; alt: string; title: string; }[] }) => (
@@ -39,7 +38,7 @@ const GalleryGrid = ({ images }: { images: { id: string; src: string; alt: strin
 
 export function Gallery() {
   return (
-    <section className="py-20 md:py-32 bg-background/50">
+    <section className="py-20 md:py-32 bg-background/50 overflow-hidden">
       <div className="container mx-auto px-4 md:px-6">
         <div className="space-y-20 md:space-y-24">
             <div>

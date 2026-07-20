@@ -1,13 +1,13 @@
 import * as React from 'react';
 
 const menuItems = [
-  'Mushroom Curry',
+  'Mushroom Curry with Malabari Paratha',
   'Idli Sambhar',
   'Sambhar Vada',
   'Ghee Podi Thatte Idli',
   'Lemon Rice',
   'Punugulu',
-  'Ghee Roast Paneer'
+  'Ghee Roast Paneer with Malabari Paratha'
 ];
 
 const MarqueeContent = () => (
@@ -29,7 +29,7 @@ const MarqueeContent = () => (
 
 export function Marquee() {
   return (
-    <section className="py-16 md:py-24 bg-card">
+    <section className="py-16 md:py-24 bg-card overflow-hidden">
       <div className="container mx-auto px-4 md:px-6 text-center">
         <h2 className="font-headline text-3xl md:text-4xl font-bold text-primary">
           Signature South Indian Dishes

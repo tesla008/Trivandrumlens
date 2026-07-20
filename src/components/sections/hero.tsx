@@ -51,13 +51,13 @@ export function Hero() {
           </div>
 
           <div className="mt-10 flex flex-col sm:flex-row gap-5">
-            <Button asChild size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 shadow-lg text-lg px-12 h-16 uppercase font-bold tracking-wider">
+            <Button asChild size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 shadow-lg text-lg px-8 sm:px-12 h-16 uppercase font-bold tracking-wider">
               <Link href="#contact">Visit Trivandrum Café</Link>
             </Button>
-            <Button asChild variant="outline" size="lg" className="border-border text-foreground bg-background hover:bg-white backdrop-blur-sm text-lg px-12 h-16 uppercase font-bold tracking-wider transition-colors">
+            <Button asChild variant="outline" size="lg" className="border-border text-foreground bg-background hover:bg-white backdrop-blur-sm text-lg px-8 sm:px-12 h-16 uppercase font-bold tracking-wider transition-colors">
               <Link href="#locations">View Locations</Link>
             </Button>
-            <Button asChild size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 shadow-lg text-lg px-12 h-16 uppercase font-bold tracking-wider">
+            <Button asChild size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 shadow-lg text-lg px-8 sm:px-12 h-16 uppercase font-bold tracking-wider">
               <a href="https://forms.gle/42hVF8SDbmEg9MLG7" target="_blank" rel="noopener noreferrer">Apply Franchise</a>
             </Button>
           </div>

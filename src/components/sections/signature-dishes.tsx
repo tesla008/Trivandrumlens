@@ -1,4 +1,3 @@
-
 "use client";
 
 import Image from "next/image";
@@ -18,13 +17,13 @@ const dishes = [
     image: "https://exlaucgslmfiakllbtnq.supabase.co/storage/v1/object/public/Additional/Punugulu.jpeg"
   },
   {
-    name: "Mushroom Curry",
-    description: "A rich, creamy, and spicy mushroom delicacy prepared with traditional South Indian spices.",
+    name: "Mushroom Curry with Malabari Paratha",
+    description: "A rich, creamy, and spicy mushroom delicacy prepared with traditional South Indian spices, served with soft parathas.",
     image: "https://exlaucgslmfiakllbtnq.supabase.co/storage/v1/object/public/Additional/mushroomcurry.jpeg"
   },
   {
-    name: "Ghee Roast Paneer",
-    description: "Succulent paneer cubes tossed in a fiery, aromatic ghee-based spice mix.",
+    name: "Ghee Roast Paneer with Malabari Paratha",
+    description: "Succulent paneer cubes tossed in a fiery, aromatic ghee-based spice mix, served with flaky Malabari parathas.",
     image: "https://exlaucgslmfiakllbtnq.supabase.co/storage/v1/object/public/Additional/gheeroast.jpeg"
   },
   {
