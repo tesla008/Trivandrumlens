@@ -43,7 +43,10 @@ export function Footer() {
             <h4 className="font-semibold text-foreground uppercase tracking-wider text-sm mb-4">Connect</h4>
             <div className="flex items-center gap-3 mb-3">
               <Phone className="h-5 w-5 text-primary" />
-              <a href="tel:+919529658611" className="text-foreground/80 hover:text-primary transition-colors">+91 95296 58611</a>
+              <div className="flex flex-col">
+                <a href="tel:+919529658611" className="text-foreground/80 hover:text-primary transition-colors">+91 95296 58611</a>
+                <a href="tel:+918605585051" className="text-foreground/80 hover:text-primary transition-colors">+91 86055 85051</a>
+              </div>
             </div>
             <div className="flex space-x-4">
               <Link href="https://www.instagram.com/trivandrum_cafe_official/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="text-foreground/80 hover:text-primary transition-colors"><Instagram className="h-6 w-6" /></Link>
