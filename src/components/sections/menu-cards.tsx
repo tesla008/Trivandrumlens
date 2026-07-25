@@ -34,17 +34,17 @@ export function MenuCards() {
       <section id="menu" className="py-20 md:py-32 bg-background scroll-mt-20">
         <div className="container mx-auto px-4 md:px-6">
           <div className="text-center mb-16">
-            <h2 className="font-headline text-4xl md:text-5xl font-bold text-primary">Explore Our Menu</h2>
-            <p className="mt-4 text-lg text-foreground/80 max-w-2xl mx-auto">
+            <h2 className="font-headline text-4xl md:text-5xl font-bold text-primary uppercase">Explore Our Menu</h2>
+            <p className="mt-4 text-lg text-foreground/80 max-w-2xl mx-auto italic">
               Authentic South Indian flavors, thoughtfully curated.
             </p>
           </div>
           
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8">
+          <div className="flex flex-wrap justify-center gap-6 md:gap-8">
             {menuImages.map((image, index) => (
               <Card 
                 key={image.id} 
-                className="group overflow-hidden rounded-lg shadow-lg hover:shadow-2xl transition-all duration-300 ease-in-out"
+                className="group overflow-hidden rounded-lg shadow-lg hover:shadow-2xl transition-all duration-300 ease-in-out w-full sm:w-[calc(50%-1.5rem)] lg:w-[calc(33.333%-2rem)] max-w-[380px]"
               >
                 <CardContent className="p-0 relative aspect-[4/5] bg-card">
                   {imageErrors[image.id] ? (
@@ -67,7 +67,7 @@ export function MenuCards() {
                     <Button 
                       variant="outline"
                       size="lg"
-                      className="text-foreground bg-white/80 backdrop-blur-sm hover:bg-white rounded-full border-transparent"
+                      className="text-foreground bg-white/80 backdrop-blur-sm hover:bg-white rounded-full border-transparent font-bold uppercase tracking-wider"
                       onClick={() => openModal(index)}
                     >
                       <Eye className="mr-2" />
@@ -122,7 +122,7 @@ export function MenuCards() {
             </Carousel>
             <button 
               onClick={() => setIsOpen(false)} 
-              className="absolute top-6 right-6 text-white p-2 rounded-full bg-black/50 hover:bg-black/80 transition-colors z-[60]"
+              className="absolute top-6 right-6 text-white p-2 rounded-full bg-black/50 hover:bg-black/80 transition-colors z-[60] min-h-[44px] min-w-[44px] flex items-center justify-center"
             >
                 <X className="h-8 w-8" />
                 <span className="sr-only">Close</span>

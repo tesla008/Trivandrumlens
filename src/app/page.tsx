@@ -26,11 +26,11 @@ export default function Home() {
       </div>
       <InfluencerVideos />
       <MenuCards />
-      <div id="locations">
-        <VisualFeast />
-      </div>
       <div id="gallery">
         <Gallery />
+      </div>
+      <div id="locations">
+        <VisualFeast />
       </div>
       <div id="reviews">
         <Reviews />

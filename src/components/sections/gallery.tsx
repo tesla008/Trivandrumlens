@@ -11,13 +11,26 @@ const familyImages = [
 const ambienceImages = [
     { id: 'amb-1', src: 'https://exlaucgslmfiakllbtnq.supabase.co/storage/v1/object/public/Additional/AMB1.JPG', alt: 'Interior of the cafe', title: 'Warm & Inviting' },
     { id: 'amb-2', src: 'https://exlaucgslmfiakllbtnq.supabase.co/storage/v1/object/public/Additional/AMB2.jpg', alt: 'Cafe seating area', title: 'Comfortable Seating' },
-    { id: 'amb-3', src: 'https://exlaucgslmfiakllbtnq.supabase.co/storage/v1/object/public/Additional/AMB3.JPG', alt: 'Cafe decor details', title: 'Authentic Touches' }
+    { id: 'amb-3', src: 'https://exlaucgslmfiakllbtnq.supabase.co/storage/v1/object/public/Additional/AMB3.JPG', alt: 'Cafe decor details', title: 'Authentic Touches' },
+    { id: 'amb-cel', src: 'https://exlaucgslmfiakllbtnq.supabase.co/storage/v1/object/public/Additional/Celebrity.jpeg', alt: 'Celebrity Visit', title: 'Celebrity Choice' },
+    { id: 'amb-loc1', src: 'https://exlaucgslmfiakllbtnq.supabase.co/storage/v1/object/public/Additional/Chatrapatinagar.jpg', alt: 'Chhatrapati Nagar Outlet', title: 'Chhatrapati Nagar' },
+    { id: 'amb-loc2', src: 'https://exlaucgslmfiakllbtnq.supabase.co/storage/v1/object/public/Additional/Trimurtinagar.jpg', alt: 'Trimurti Nagar Outlet', title: 'Trimurti Nagar' },
+    { id: 'amb-loc3', src: 'https://exlaucgslmfiakllbtnq.supabase.co/storage/v1/object/public/Additional/Tukdojiputla.jpg', alt: 'Tukdoji Putla Outlet', title: 'Tukdoji Putla' }
+];
+
+const signatureImages = [
+    { id: 'dish-1', src: 'https://exlaucgslmfiakllbtnq.supabase.co/storage/v1/object/public/Additional/Dosa.jpeg', alt: 'Dosa', title: 'Signature Dosa' },
+    { id: 'dish-2', src: 'https://exlaucgslmfiakllbtnq.supabase.co/storage/v1/object/public/Additional/Punugulu.jpeg', alt: 'Punugulu', title: 'Crispy Punugulu' },
+    { id: 'dish-3', src: 'https://exlaucgslmfiakllbtnq.supabase.co/storage/v1/object/public/Additional/mushroomcurry.jpeg', alt: 'Mushroom Curry', title: 'Mushroom Curry' },
+    { id: 'dish-4', src: 'https://exlaucgslmfiakllbtnq.supabase.co/storage/v1/object/public/Additional/gheeroast.jpeg', alt: 'Ghee Roast Paneer', title: 'Ghee Roast Paneer' },
+    { id: 'dish-5', src: 'https://exlaucgslmfiakllbtnq.supabase.co/storage/v1/object/public/Additional/GheePodiThatteIdli.JPG', alt: 'Ghee Podi Thatte Idli', title: 'Thatte Idli' },
+    { id: 'dish-6', src: 'https://exlaucgslmfiakllbtnq.supabase.co/storage/v1/object/public/Additional/Sambharvada.JPG', alt: 'Sambhar Vada', title: 'Sambhar Vada' }
 ];
 
 const GalleryGrid = ({ images }: { images: { id: string; src: string; alt: string; title: string; }[] }) => (
-  <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+  <div className="flex flex-wrap justify-center gap-6">
     {images.map((image) => (
-      <Card key={image.id} className="group overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 ease-in-out">
+      <Card key={image.id} className="group overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 ease-in-out w-full sm:w-[calc(50%-1.5rem)] lg:w-[calc(25%-1.5rem)] max-w-[280px]">
         <div className="relative aspect-square">
           <Image
             src={image.src}
@@ -42,14 +55,21 @@ export function Gallery() {
       <div className="container mx-auto px-4 md:px-6">
         <div className="space-y-20 md:space-y-24">
             <div>
-                <h3 className="font-headline text-3xl md:text-4xl font-bold text-primary text-center mb-4">Trusted by Families</h3>
-                <p className="text-md text-foreground/70 max-w-2xl mx-auto text-center mb-12">Moments shared over authentic South Indian flavors</p>
+                <h3 className="font-headline text-3xl md:text-4xl font-bold text-primary text-center mb-4 uppercase">Trusted by Families</h3>
+                <p className="text-md text-foreground/70 max-w-2xl mx-auto text-center mb-12 italic">Moments shared over authentic South Indian flavors</p>
                 <GalleryGrid images={familyImages} />
             </div>
+            
             <div>
-                <h3 className="font-headline text-3xl md:text-4xl font-bold text-primary text-center mb-4">Ambience</h3>
-                <p className="text-md text-foreground/70 max-w-2xl mx-auto text-center mb-12">Warm, inviting, and rooted in tradition</p>
+                <h3 className="font-headline text-3xl md:text-4xl font-bold text-primary text-center mb-4 uppercase">Our Ambience</h3>
+                <p className="text-md text-foreground/70 max-w-2xl mx-auto text-center mb-12 italic">Warm, inviting, and rooted in tradition</p>
                 <GalleryGrid images={ambienceImages} />
+            </div>
+
+            <div>
+                <h3 className="font-headline text-3xl md:text-4xl font-bold text-primary text-center mb-4 uppercase">Signature Specials</h3>
+                <p className="text-md text-foreground/70 max-w-2xl mx-auto text-center mb-12 italic">Crafted with time-honored techniques</p>
+                <GalleryGrid images={signatureImages} />
             </div>
         </div>
       </div>
