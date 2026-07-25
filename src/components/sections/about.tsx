@@ -1,4 +1,3 @@
-
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
@@ -29,7 +28,7 @@ export function About() {
             </div>
             
             <p className="text-lg text-foreground/80 leading-relaxed max-w-xl">
-              Trivandrum Café was born from a simple mission: to bring the true, unadulterated flavors of South Indian homes to the heart of Nagpur. Every recipe is a celebration of heritage, crafted with ingredients sourced directly from the South to maintain that signature authenticity.
+              Every meal at Trivandrum Café is crafted to leave you completely satisfied. Our mission is to bring the true, unadulterated flavors of South Indian homes to the heart of Nagpur. Every recipe is a celebration of heritage, ensuring a satisfying dining experience for every guest.
             </p>
             
             <ul className="space-y-4 text-foreground">
@@ -37,13 +36,13 @@ export function About() {
                     <div className="bg-primary/10 p-1 rounded-full mt-1">
                       <Check className="text-primary h-4 w-4" />
                     </div>
-                    <span className="text-lg"><strong>Authentic Sourcing:</strong> Rice, coffee, and spices from Southern India.</span>
+                    <span className="text-lg"><strong>Freshly Prepared:</strong> Food that keeps you coming back for its authentic taste.</span>
                 </li>
                 <li className="flex items-start gap-4">
                     <div className="bg-primary/10 p-1 rounded-full mt-1">
                       <Check className="text-primary h-4 w-4" />
                     </div>
-                    <span className="text-lg"><strong>Generational Recipes:</strong> Time-honored cooking methods.</span>
+                    <span className="text-lg"><strong>Generous Portions:</strong> Satisfying meals served with warmth and care.</span>
                 </li>
             </ul>
 

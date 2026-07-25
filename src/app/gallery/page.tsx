@@ -14,14 +14,14 @@ const galleryImages = [
     { id: 'amb-1', src: 'https://exlaucgslmfiakllbtnq.supabase.co/storage/v1/object/public/Additional/AMB1.JPG', alt: 'Interior of the cafe', title: 'Warm & Inviting', category: 'Ambience' },
     { id: 'amb-2', src: 'https://exlaucgslmfiakllbtnq.supabase.co/storage/v1/object/public/Additional/AMB2.jpg', alt: 'Cafe seating area', title: 'Comfortable Seating', category: 'Ambience' },
     { id: 'amb-3', src: 'https://exlaucgslmfiakllbtnq.supabase.co/storage/v1/object/public/Additional/AMB3.JPG', alt: 'Cafe decor details', title: 'Authentic Touches', category: 'Ambience' },
-    { id: 'amb-cel', src: 'https://exlaucgslmfiakllbtnq.supabase.co/storage/v1/object/public/Additional/Celebrity.jpeg', alt: 'Celebrity Visit', title: 'Celebrity Choice', category: 'Ambience' },
+    { id: 'amb-cel', src: 'https://exlaucgslmfiakllbtnq.supabase.co/storage/v1/object/public/Additional/celebrity01.jpeg', alt: 'Celebrity Visit', title: 'Celebrity Choice', category: 'Ambience' },
     { id: 'amb-loc1', src: 'https://exlaucgslmfiakllbtnq.supabase.co/storage/v1/object/public/Additional/Chatrapatinagar.jpg', alt: 'Chhatrapati Nagar Outlet', title: 'Chhatrapati Nagar', category: 'Locations' },
     { id: 'amb-loc2', src: 'https://exlaucgslmfiakllbtnq.supabase.co/storage/v1/object/public/Additional/Trimurtinagar.jpg', alt: 'Trimurti Nagar Outlet', title: 'Trimurti Nagar', category: 'Locations' },
     { id: 'amb-loc3', src: 'https://exlaucgslmfiakllbtnq.supabase.co/storage/v1/object/public/Additional/Tukdojiputla.jpg', alt: 'Tukdoji Putla Outlet', title: 'Tukdoji Putla', category: 'Locations' },
     { id: 'dish-1', src: 'https://exlaucgslmfiakllbtnq.supabase.co/storage/v1/object/public/Additional/Dosa.jpeg', alt: 'Dosa', title: 'Signature Dosa', category: 'Signature Specials' },
     { id: 'dish-2', src: 'https://exlaucgslmfiakllbtnq.supabase.co/storage/v1/object/public/Additional/Punugulu.jpeg', alt: 'Punugulu', title: 'Crispy Punugulu', category: 'Signature Specials' },
-    { id: 'dish-3', src: 'https://exlaucgslmfiakllbtnq.supabase.co/storage/v1/object/public/Additional/mushroomcurry.jpeg', alt: 'Mushroom Curry', title: 'Mushroom Curry', category: 'Signature Specials' },
-    { id: 'dish-4', src: 'https://exlaucgslmfiakllbtnq.supabase.co/storage/v1/object/public/Additional/gheeroast.jpeg', alt: 'Ghee Roast Paneer', title: 'Ghee Roast Paneer', category: 'Signature Specials' },
+    { id: 'dish-3', src: 'https://exlaucgslmfiakllbtnq.supabase.co/storage/v1/object/public/Additional/mushroomcurry.jpeg', alt: 'Hyderabadi Mushroom Curry with Malabari Paratha', title: 'Hyderabadi Mushroom Curry', category: 'Signature Specials' },
+    { id: 'dish-4', src: 'https://exlaucgslmfiakllbtnq.supabase.co/storage/v1/object/public/Additional/gheeroast.jpeg', alt: 'Ghee Roast Paneer with Malabari Paratha', title: 'Ghee Roast Paneer', category: 'Signature Specials' },
     { id: 'dish-5', src: 'https://exlaucgslmfiakllbtnq.supabase.co/storage/v1/object/public/Additional/GheePodiThatteIdli.JPG', alt: 'Ghee Podi Thatte Idli', title: 'Thatte Idli', category: 'Signature Specials' },
     { id: 'dish-6', src: 'https://exlaucgslmfiakllbtnq.supabase.co/storage/v1/object/public/Additional/Sambharvada.JPG', alt: 'Sambhar Vada', title: 'Sambhar Vada', category: 'Signature Specials' }
 ];
@@ -35,7 +35,7 @@ export default function GalleryPage() {
                 <div className="text-center mb-16 space-y-4">
                     <h1 className="font-headline text-5xl md:text-7xl font-bold text-primary uppercase">Gallery</h1>
                     <p className="text-lg text-foreground/70 max-w-2xl mx-auto italic">
-                        Capturing the essence of tradition, warmth, and flavor at Trivandrum Café.
+                        Capturing the essence of tradition, warmth, and a satisfying dining experience at Trivandrum Café.
                     </p>
                 </div>
 

@@ -1,7 +1,7 @@
 import * as React from 'react';
 
 const menuItems = [
-  'Mushroom Curry with Malabari Paratha',
+  'Hyderabadi Mushroom Curry with Malabari Paratha',
   'Idli Sambhar',
   'Sambhar Vada',
   'Ghee Podi Thatte Idli',
@@ -34,8 +34,8 @@ export function Marquee() {
         <h2 className="font-headline text-3xl md:text-4xl font-bold text-primary">
           Signature South Indian Dishes
         </h2>
-        <p className="mt-2 text-md text-foreground/70 max-w-2xl mx-auto">
-          Authentic flavors served fresh every day
+        <p className="mt-2 text-md text-foreground/70 max-w-2xl mx-auto italic">
+          Authentic flavors with generous portions
         </p>
       </div>
       <div className="relative mt-12 w-full overflow-x-hidden group">

@@ -7,12 +7,15 @@ import { Dialog, DialogContent, DialogTitle, DialogDescription } from '@/compone
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel';
 import { Button } from '@/components/ui/button';
 import { X, Eye, ImageOff } from 'lucide-react';
+import { VisuallyHidden } from "@radix-ui/react-visually-hidden";
 
 const menuImages = [
-  { id: 'menu-3', src: 'https://exlaucgslmfiakllbtnq.supabase.co/storage/v1/object/public/Additional/menu3.jpg', alt: 'Menu Card Page 3' },
-  { id: 'menu-5', src: 'https://exlaucgslmfiakllbtnq.supabase.co/storage/v1/object/public/Additional/menu5.jpg', alt: 'Menu Card Page 5' },
-  { id: 'menu-6', src: 'https://exlaucgslmfiakllbtnq.supabase.co/storage/v1/object/public/Additional/menu6.jpg', alt: 'Menu Card Page 6' },
-  { id: 'menu-9', src: 'https://exlaucgslmfiakllbtnq.supabase.co/storage/v1/object/public/Additional/menu9.jpg', alt: 'Menu Card Page 9' },
+  { id: 'menu-1', src: 'https://exlaucgslmfiakllbtnq.supabase.co/storage/v1/object/public/Additional/menu001.png', alt: 'Menu Card Page 1' },
+  { id: 'menu-2', src: 'https://exlaucgslmfiakllbtnq.supabase.co/storage/v1/object/public/Additional/menu002.png', alt: 'Menu Card Page 2' },
+  { id: 'menu-3', src: 'https://exlaucgslmfiakllbtnq.supabase.co/storage/v1/object/public/Additional/menu003.png', alt: 'Menu Card Page 3' },
+  { id: 'menu-4', src: 'https://exlaucgslmfiakllbtnq.supabase.co/storage/v1/object/public/Additional/menu004.png', alt: 'Menu Card Page 4' },
+  { id: 'menu-5', src: 'https://exlaucgslmfiakllbtnq.supabase.co/storage/v1/object/public/Additional/menu005.png', alt: 'Menu Card Page 5' },
+  { id: 'menu-6', src: 'https://exlaucgslmfiakllbtnq.supabase.co/storage/v1/object/public/Additional/menu006.png', alt: 'Menu Card Page 6' },
 ];
 
 export function MenuCards() {
@@ -36,7 +39,7 @@ export function MenuCards() {
           <div className="text-center mb-16">
             <h2 className="font-headline text-4xl md:text-5xl font-bold text-primary uppercase">Explore Our Menu</h2>
             <p className="mt-4 text-lg text-foreground/80 max-w-2xl mx-auto italic">
-              Authentic South Indian flavors, thoughtfully curated.
+              Authentic South Indian flavors, crafted for a satisfying dining experience.
             </p>
           </div>
           
@@ -83,10 +86,10 @@ export function MenuCards() {
 
       <Dialog open={isOpen} onOpenChange={setIsOpen}>
         <DialogContent className="max-w-none w-screen h-screen bg-black/95 border-0 shadow-none p-0 flex items-center justify-center">
-            <div className="sr-only">
+            <VisuallyHidden>
               <DialogTitle>Menu Image Viewer</DialogTitle>
               <DialogDescription>Full screen view of our menu cards.</DialogDescription>
-            </div>
+            </VisuallyHidden>
             <Carousel 
                 key={startIndex}
                 opts={{ loop: true, startIndex: startIndex }} 

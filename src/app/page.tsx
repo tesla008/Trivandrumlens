@@ -9,7 +9,6 @@ import { Gallery } from "@/components/sections/gallery";
 import { Reviews } from "@/components/sections/reviews";
 import { Faq } from "@/components/sections/faq";
 import { Marquee } from "@/components/sections/marquee";
-import { InfluencerVideos } from "@/components/sections/influencer-videos";
 import { FoodCreators } from "@/components/sections/food-creators";
 
 export default function Home() {
@@ -24,7 +23,6 @@ export default function Home() {
       <div id="specialties">
         <SignatureDishes />
       </div>
-      <InfluencerVideos />
       <MenuCards />
       <div id="gallery">
         <Gallery />

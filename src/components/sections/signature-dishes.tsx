@@ -8,32 +8,32 @@ import { Card, CardContent } from "@/components/ui/card";
 const dishes = [
   {
     name: "Dosa",
-    description: "Thin, crispy South Indian crepes served with aromatic sambar and a variety of chutneys.",
+    description: "Thin, crispy South Indian crepes served with aromatic sambar and a variety of chutneys for a truly satisfying meal.",
     image: "https://exlaucgslmfiakllbtnq.supabase.co/storage/v1/object/public/Additional/Dosa.jpeg"
   },
   {
     name: "Punugulu",
-    description: "Crispy deep-fried rice and lentil batter balls, a perfect tea-time snack.",
+    description: "Crispy deep-fried rice and lentil batter balls, freshly prepared to provide a perfect and satisfying snack.",
     image: "https://exlaucgslmfiakllbtnq.supabase.co/storage/v1/object/public/Additional/Punugulu.jpeg"
   },
   {
-    name: "Mushroom Curry with Malabari Paratha",
-    description: "A rich, creamy, and spicy mushroom delicacy prepared with traditional South Indian spices, served with soft parathas.",
+    name: "Hyderabadi Mushroom Curry with Malabari Paratha",
+    description: "A rich, creamy mushroom delicacy prepared with authentic spices, served with soft parathas for a complete dining experience.",
     image: "https://exlaucgslmfiakllbtnq.supabase.co/storage/v1/object/public/Additional/mushroomcurry.jpeg"
   },
   {
     name: "Ghee Roast Paneer with Malabari Paratha",
-    description: "Succulent paneer cubes tossed in a fiery, aromatic ghee-based spice mix, served with flaky Malabari parathas.",
+    description: "Succulent paneer cubes tossed in a fiery, aromatic ghee-based spice mix, served with flaky parathas for a satisfying feast.",
     image: "https://exlaucgslmfiakllbtnq.supabase.co/storage/v1/object/public/Additional/gheeroast.jpeg"
   },
   {
     name: "Ghee Podi Thatte Idli",
-    description: "Plate-sized idlis soaked in golden ghee and sprinkled with aromatic spicy podi.",
+    description: "Plate-sized idlis soaked in golden ghee and sprinkled with aromatic spicy podi, a memorable and satisfying favorite.",
     image: "https://exlaucgslmfiakllbtnq.supabase.co/storage/v1/object/public/Additional/GheePodiThatteIdli.JPG"
   },
   {
     name: "Sambhar Vada",
-    description: "Crispy, savory lentil donuts perfectly paired with tangy sambar.",
+    description: "Crispy, savory lentil donuts perfectly paired with tangy sambar, freshly prepared for every guest.",
     image: "https://exlaucgslmfiakllbtnq.supabase.co/storage/v1/object/public/Additional/Sambharvada.JPG"
   }
 ];
@@ -48,7 +48,7 @@ export function SignatureDishes() {
             Signature Specials
           </h2>
           <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-            Crafted with time-honored techniques and authentic spices sourced directly from South India.
+            Every meal is crafted to leave you completely satisfied, using authentic spices sourced directly from South India.
           </p>
         </div>
 

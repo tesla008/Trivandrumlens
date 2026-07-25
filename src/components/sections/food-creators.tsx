@@ -1,7 +1,6 @@
 'use client';
 
 import React, { useEffect } from 'react';
-import { Card, CardContent } from '@/components/ui/card';
 
 export function FoodCreators() {
   useEffect(() => {
@@ -35,32 +34,13 @@ export function FoodCreators() {
             Featured By Food Creators
           </h2>
           <p className="mt-4 text-lg text-foreground/70 max-w-2xl mx-auto italic">
-            See what food influencers and customers are saying about our authentic South Indian flavors.
+            See what food influencers and customers are saying about our authentic South Indian flavors and satisfying dining experience.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start max-w-4xl mx-auto">
-          {/* Video 1: MP4 Native Embed */}
-          <div className="space-y-6">
-            <Card className="overflow-hidden border-none shadow-2xl rounded-[2.5rem] aspect-[9/16] bg-black group transition-all duration-500 hover:shadow-primary/10">
-              <CardContent className="p-0 h-full">
-                <video
-                  src="https://exlaucgslmfiakllbtnq.supabase.co/storage/v1/object/public/Additional/Influencervideo1.mp4"
-                  className="w-full h-full object-cover"
-                  controls
-                  playsInline
-                  preload="metadata"
-                />
-              </CardContent>
-            </Card>
-            <div className="text-center">
-                <p className="font-headline text-2xl font-bold text-foreground">Food Creator Review</p>
-                <div className="h-1 w-12 bg-primary mx-auto mt-2 rounded-full" />
-            </div>
-          </div>
-
-          {/* Video 2: Instagram Reel Embed */}
-          <div className="space-y-6">
+        <div className="flex justify-center items-center max-w-xl mx-auto">
+          {/* Video 2: Instagram Reel Embed - Now centered */}
+          <div className="space-y-6 w-full">
             <div className="flex justify-center items-center w-full min-h-[500px] md:min-h-[600px] bg-card/50 rounded-[2.5rem] p-2 shadow-xl border border-primary/10">
               <div className="w-full max-w-[400px]">
                 <blockquote 

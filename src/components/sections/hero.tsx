@@ -46,7 +46,7 @@ export function Hero() {
               Taste Tradition, <br /> Taste <span className="text-primary">Trivandrum</span>
             </h1>
             <p className="text-lg md:text-2xl font-medium opacity-90 max-w-2xl leading-relaxed" style={{ textShadow: '0 2px 10px rgba(0,0,0,0.8)'}}>
-              Experience tradition in every bite — from crispy golden dosas to freshly brewed filter coffee served in the heart of Nagpur.
+              A satisfying dining experience for every guest — from freshly prepared flavors that keep you coming back to the heart of Nagpur.
             </p>
           </div>
 
