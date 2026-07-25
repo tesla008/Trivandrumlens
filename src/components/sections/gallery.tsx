@@ -18,15 +18,6 @@ const ambienceImages = [
     { id: 'amb-loc3', src: 'https://exlaucgslmfiakllbtnq.supabase.co/storage/v1/object/public/Additional/Tukdojiputla.jpg', alt: 'Tukdoji Putla Outlet', title: 'Tukdoji Putla' }
 ];
 
-const signatureImages = [
-    { id: 'dish-1', src: 'https://exlaucgslmfiakllbtnq.supabase.co/storage/v1/object/public/Additional/Dosa.jpeg', alt: 'Dosa', title: 'Signature Dosa' },
-    { id: 'dish-2', src: 'https://exlaucgslmfiakllbtnq.supabase.co/storage/v1/object/public/Additional/Punugulu.jpeg', alt: 'Punugulu', title: 'Crispy Punugulu' },
-    { id: 'dish-3', src: 'https://exlaucgslmfiakllbtnq.supabase.co/storage/v1/object/public/Additional/mushroomcurry.jpeg', alt: 'Mushroom Curry', title: 'Mushroom Curry' },
-    { id: 'dish-4', src: 'https://exlaucgslmfiakllbtnq.supabase.co/storage/v1/object/public/Additional/gheeroast.jpeg', alt: 'Ghee Roast Paneer', title: 'Ghee Roast Paneer' },
-    { id: 'dish-5', src: 'https://exlaucgslmfiakllbtnq.supabase.co/storage/v1/object/public/Additional/GheePodiThatteIdli.JPG', alt: 'Ghee Podi Thatte Idli', title: 'Thatte Idli' },
-    { id: 'dish-6', src: 'https://exlaucgslmfiakllbtnq.supabase.co/storage/v1/object/public/Additional/Sambharvada.JPG', alt: 'Sambhar Vada', title: 'Sambhar Vada' }
-];
-
 const GalleryGrid = ({ images }: { images: { id: string; src: string; alt: string; title: string; }[] }) => (
   <div className="flex flex-wrap justify-center gap-6">
     {images.map((image) => (
@@ -64,12 +55,6 @@ export function Gallery() {
                 <h3 className="font-headline text-3xl md:text-4xl font-bold text-primary text-center mb-4 uppercase">Our Ambience</h3>
                 <p className="text-md text-foreground/70 max-w-2xl mx-auto text-center mb-12 italic">Warm, inviting, and rooted in tradition</p>
                 <GalleryGrid images={ambienceImages} />
-            </div>
-
-            <div>
-                <h3 className="font-headline text-3xl md:text-4xl font-bold text-primary text-center mb-4 uppercase">Signature Specials</h3>
-                <p className="text-md text-foreground/70 max-w-2xl mx-auto text-center mb-12 italic">Crafted with time-honored techniques</p>
-                <GalleryGrid images={signatureImages} />
             </div>
         </div>
       </div>
