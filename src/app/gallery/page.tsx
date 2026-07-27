@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import Image from 'next/image';
-import { Card } from '@/components/ui/card';
+import { Card, CardContent } from '@/components/ui/card';
 import { Dialog, DialogContent, DialogTitle, DialogDescription } from '@/components/ui/dialog';
 import { X, ZoomIn } from 'lucide-react';
 
@@ -44,6 +44,38 @@ export default function GalleryPage() {
                     <p className="text-lg text-foreground/70 max-w-2xl mx-auto italic">
                         Capturing the essence of tradition, warmth, and a satisfying dining experience at Trivandrum Café.
                     </p>
+                </div>
+
+                {/* Outlet Ambiance Videos - Requirement 3: Display at the beginning of the Gallery */}
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16 max-w-5xl mx-auto">
+                    <div className="space-y-4">
+                        <Card className="overflow-hidden rounded-[2rem] shadow-xl border-none">
+                            <CardContent className="p-0 aspect-[16/9] bg-black">
+                                <video
+                                    src="https://exlaucgslmfiakllbtnq.supabase.co/storage/v1/object/public/Additional/TukdojiPutla.mp4"
+                                    className="w-full h-full object-cover"
+                                    controls
+                                    playsInline
+                                    preload="metadata"
+                                />
+                            </CardContent>
+                        </Card>
+                        <p className="text-center font-headline text-xl font-bold">Tukdoji Putla Ambiance</p>
+                    </div>
+                    <div className="space-y-4">
+                        <Card className="overflow-hidden rounded-[2rem] shadow-xl border-none">
+                            <CardContent className="p-0 aspect-[16/9] bg-black">
+                                <video
+                                    src="https://exlaucgslmfiakllbtnq.supabase.co/storage/v1/object/public/Additional/SambhajiSqaure.mp4"
+                                    className="w-full h-full object-cover"
+                                    controls
+                                    playsInline
+                                    preload="metadata"
+                                />
+                            </CardContent>
+                        </Card>
+                        <p className="text-center font-headline text-xl font-bold">Sambhaji Square Moments</p>
+                    </div>
                 </div>
 
                 <div className="flex flex-wrap justify-center gap-6">
