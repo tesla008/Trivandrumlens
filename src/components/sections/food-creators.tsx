@@ -39,7 +39,7 @@ export function FoodCreators() {
         </div>
 
         {/* Featured Content Row - Influencer & Celebrity */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start justify-center">
           {/* Instagram Reel */}
           <div className="space-y-4">
             <div className="flex justify-center items-center w-full min-h-[500px] md:min-h-[600px] bg-card/50 rounded-[2.5rem] p-2 shadow-xl border border-primary/10">
@@ -70,10 +70,10 @@ export function FoodCreators() {
             <p className="text-center font-headline text-xl font-bold">Food Creator Review</p>
           </div>
 
-          {/* Celebrity Promotion Video */}
+          {/* Celebrity Promotion Video - Resized to match Instagram Reel dimensions */}
           <div className="space-y-4">
-            <Card className="overflow-hidden rounded-[2.5rem] shadow-xl border-none h-full">
-              <CardContent className="p-0 aspect-[9/16] bg-black">
+            <div className="flex justify-center items-center w-full min-h-[500px] md:min-h-[600px] bg-card/50 rounded-[2.5rem] p-2 shadow-xl border border-primary/10 overflow-hidden">
+              <div className="w-full max-w-[400px] aspect-[9/16] rounded-[2rem] overflow-hidden bg-black shadow-inner">
                 <video
                   src="https://exlaucgslmfiakllbtnq.supabase.co/storage/v1/object/public/Additional/celebvideo.mp4"
                   className="w-full h-full object-cover"
@@ -81,8 +81,8 @@ export function FoodCreators() {
                   playsInline
                   preload="metadata"
                 />
-              </CardContent>
-            </Card>
+              </div>
+            </div>
             <p className="text-center font-headline text-xl font-bold">Celebrity Promotion</p>
           </div>
         </div>
