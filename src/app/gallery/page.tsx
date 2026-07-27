@@ -7,23 +7,30 @@ import { Dialog, DialogContent, DialogTitle, DialogDescription } from '@/compone
 import { X, ZoomIn } from 'lucide-react';
 
 const galleryImages = [
-    { id: 'fam-1', src: 'https://exlaucgslmfiakllbtnq.supabase.co/storage/v1/object/public/Additional/pic1.png', alt: 'Family enjoying a meal', title: 'Quality Time', category: 'Families' },
-    { id: 'fam-2', src: 'https://exlaucgslmfiakllbtnq.supabase.co/storage/v1/object/public/Additional/pic2.png', alt: 'Happy customers at the cafe', title: 'Shared Moments', category: 'Families' },
-    { id: 'fam-3', src: 'https://exlaucgslmfiakllbtnq.supabase.co/storage/v1/object/public/Additional/pic3.png', alt: 'Guests dining together', title: 'Making Memories', category: 'Families' },
-    { id: 'fam-4', src: 'https://exlaucgslmfiakllbtnq.supabase.co/storage/v1/object/public/Additional/pic4.png', alt: 'A group of friends at the cafe', title: 'Good Company', category: 'Families' },
+    // 1. Ambience & Interiors
     { id: 'amb-1', src: 'https://exlaucgslmfiakllbtnq.supabase.co/storage/v1/object/public/Additional/AMB1.JPG', alt: 'Interior of the cafe', title: 'Warm & Inviting', category: 'Ambience' },
     { id: 'amb-2', src: 'https://exlaucgslmfiakllbtnq.supabase.co/storage/v1/object/public/Additional/AMB2.jpg', alt: 'Cafe seating area', title: 'Comfortable Seating', category: 'Ambience' },
     { id: 'amb-3', src: 'https://exlaucgslmfiakllbtnq.supabase.co/storage/v1/object/public/Additional/AMB3.JPG', alt: 'Cafe decor details', title: 'Authentic Touches', category: 'Ambience' },
-    { id: 'amb-cel', src: 'https://exlaucgslmfiakllbtnq.supabase.co/storage/v1/object/public/Additional/celebrity01.jpeg', alt: 'Celebrity Visit', title: 'Celebrity Choice', category: 'Ambience' },
     { id: 'amb-loc1', src: 'https://exlaucgslmfiakllbtnq.supabase.co/storage/v1/object/public/Additional/Chatrapatinagar.jpg', alt: 'Chhatrapati Nagar Outlet', title: 'Chhatrapati Nagar', category: 'Locations' },
     { id: 'amb-loc2', src: 'https://exlaucgslmfiakllbtnq.supabase.co/storage/v1/object/public/Additional/Trimurtinagar.jpg', alt: 'Trimurti Nagar Outlet', title: 'Trimurti Nagar', category: 'Locations' },
     { id: 'amb-loc3', src: 'https://exlaucgslmfiakllbtnq.supabase.co/storage/v1/object/public/Additional/Tukdojiputla.jpg', alt: 'Tukdoji Putla Outlet', title: 'Tukdoji Putla', category: 'Locations' },
+    
+    // 2. Food and Signature Dishes
     { id: 'dish-1', src: 'https://exlaucgslmfiakllbtnq.supabase.co/storage/v1/object/public/Additional/Dosa.jpeg', alt: 'Dosa', title: 'Signature Dosa', category: 'Signature Specials' },
     { id: 'dish-2', src: 'https://exlaucgslmfiakllbtnq.supabase.co/storage/v1/object/public/Additional/Punugulu.jpeg', alt: 'Punugulu', title: 'Crispy Punugulu', category: 'Signature Specials' },
     { id: 'dish-3', src: 'https://exlaucgslmfiakllbtnq.supabase.co/storage/v1/object/public/Additional/mushroomcurry.jpeg', alt: 'Hyderabadi Mushroom Curry with Malabari Paratha', title: 'Hyderabadi Mushroom Curry', category: 'Signature Specials' },
     { id: 'dish-4', src: 'https://exlaucgslmfiakllbtnq.supabase.co/storage/v1/object/public/Additional/gheeroast.jpeg', alt: 'Ghee Roast Paneer with Malabari Paratha', title: 'Ghee Roast Paneer', category: 'Signature Specials' },
     { id: 'dish-5', src: 'https://exlaucgslmfiakllbtnq.supabase.co/storage/v1/object/public/Additional/GheePodiThatteIdli.JPG', alt: 'Ghee Podi Thatte Idli', title: 'Thatte Idli', category: 'Signature Specials' },
-    { id: 'dish-6', src: 'https://exlaucgslmfiakllbtnq.supabase.co/storage/v1/object/public/Additional/Sambharvada.JPG', alt: 'Sambhar Vada', title: 'Sambhar Vada', category: 'Signature Specials' }
+    { id: 'dish-6', src: 'https://exlaucgslmfiakllbtnq.supabase.co/storage/v1/object/public/Additional/Sambharvada.JPG', alt: 'Sambhar Vada', title: 'Sambhar Vada', category: 'Signature Specials' },
+
+    // 3. Celebrity visits
+    { id: 'amb-cel', src: 'https://exlaucgslmfiakllbtnq.supabase.co/storage/v1/object/public/Additional/celebrity01.jpeg', alt: 'Celebrity Visit', title: 'Celebrity Choice', category: 'Events' },
+    
+    // 4. Other restaurant moments
+    { id: 'fam-1', src: 'https://exlaucgslmfiakllbtnq.supabase.co/storage/v1/object/public/Additional/pic1.png', alt: 'Family enjoying a meal', title: 'Quality Time', category: 'Families' },
+    { id: 'fam-2', src: 'https://exlaucgslmfiakllbtnq.supabase.co/storage/v1/object/public/Additional/pic2.png', alt: 'Happy customers at the cafe', title: 'Shared Moments', category: 'Families' },
+    { id: 'fam-3', src: 'https://exlaucgslmfiakllbtnq.supabase.co/storage/v1/object/public/Additional/pic3.png', alt: 'Guests dining together', title: 'Making Memories', category: 'Families' },
+    { id: 'fam-4', src: 'https://exlaucgslmfiakllbtnq.supabase.co/storage/v1/object/public/Additional/pic4.png', alt: 'A group of friends at the cafe', title: 'Good Company', category: 'Families' }
 ];
 
 export default function GalleryPage() {

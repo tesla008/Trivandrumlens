@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useEffect } from 'react';
+import { Card, CardContent } from '@/components/ui/card';
 
 export function FoodCreators() {
   useEffect(() => {
@@ -9,7 +10,6 @@ export function FoodCreators() {
       if (window.instgrm) {
         window.instgrm.Embeds.process();
       } else {
-        // Load the script if it hasn't been loaded yet
         const script = document.createElement('script');
         script.async = true;
         script.src = 'https://www.instagram.com/embed.js';
@@ -29,18 +29,51 @@ export function FoodCreators() {
     <section className="py-20 md:py-32 bg-primary/5">
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center mb-16 space-y-4">
-          <h3 className="text-primary font-bold uppercase tracking-widest text-sm">Media Highlights</h3>
+          <h3 className="text-primary font-bold uppercase tracking-widest text-sm">Discover the Vibe</h3>
           <h2 className="font-headline text-4xl md:text-6xl font-bold text-foreground uppercase tracking-tight">
-            Featured By Food Creators
+            Experience Trivandrum Cafe
           </h2>
           <p className="mt-4 text-lg text-foreground/70 max-w-2xl mx-auto italic">
-            See what food influencers and customers are saying about our authentic South Indian flavors and satisfying dining experience.
+            A glimpse into the authentic flavours, warm ambience, and the satisfying dining experience that awaits you.
           </p>
         </div>
 
-        <div className="flex justify-center items-center max-w-xl mx-auto">
-          {/* Video 2: Instagram Reel Embed - Now centered */}
-          <div className="space-y-6 w-full">
+        {/* Ambience Videos Row */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+          <div className="space-y-4">
+            <Card className="overflow-hidden rounded-[2rem] shadow-xl border-none">
+              <CardContent className="p-0 aspect-[16/9] bg-black">
+                <video
+                  src="https://exlaucgslmfiakllbtnq.supabase.co/storage/v1/object/public/Additional/TukdojiPutla.mp4"
+                  className="w-full h-full object-cover"
+                  controls
+                  playsInline
+                  preload="metadata"
+                />
+              </CardContent>
+            </Card>
+            <p className="text-center font-headline text-xl font-bold">Tukdoji Putla Ambiance</p>
+          </div>
+          <div className="space-y-4">
+            <Card className="overflow-hidden rounded-[2rem] shadow-xl border-none">
+              <CardContent className="p-0 aspect-[16/9] bg-black">
+                <video
+                  src="https://exlaucgslmfiakllbtnq.supabase.co/storage/v1/object/public/Additional/SambhajiSqaure.mp4"
+                  className="w-full h-full object-cover"
+                  controls
+                  playsInline
+                  preload="metadata"
+                />
+              </CardContent>
+            </Card>
+            <p className="text-center font-headline text-xl font-bold">Sambhaji Square Moments</p>
+          </div>
+        </div>
+
+        {/* Featured Content Row */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+          {/* Instagram Reel */}
+          <div className="space-y-4">
             <div className="flex justify-center items-center w-full min-h-[500px] md:min-h-[600px] bg-card/50 rounded-[2.5rem] p-2 shadow-xl border border-primary/10">
               <div className="w-full max-w-[400px]">
                 <blockquote 
@@ -66,10 +99,23 @@ export function FoodCreators() {
                 </blockquote>
               </div>
             </div>
-            <div className="text-center">
-                <p className="font-headline text-2xl font-bold text-foreground">Instagram Reel</p>
-                <div className="h-1 w-12 bg-primary mx-auto mt-2 rounded-full" />
-            </div>
+            <p className="text-center font-headline text-xl font-bold">Food Creator Review</p>
+          </div>
+
+          {/* Celebrity Promotion Video */}
+          <div className="space-y-4">
+            <Card className="overflow-hidden rounded-[2.5rem] shadow-xl border-none h-full">
+              <CardContent className="p-0 aspect-[9/16] bg-black">
+                <video
+                  src="https://exlaucgslmfiakllbtnq.supabase.co/storage/v1/object/public/Additional/celebvideo.mp4"
+                  className="w-full h-full object-cover"
+                  controls
+                  playsInline
+                  preload="metadata"
+                />
+              </CardContent>
+            </Card>
+            <p className="text-center font-headline text-xl font-bold">Celebrity Promotion</p>
           </div>
         </div>
       </div>
@@ -77,7 +123,6 @@ export function FoodCreators() {
   );
 }
 
-// Global declaration for Instagram embed window object
 declare global {
   interface Window {
     instgrm: any;
