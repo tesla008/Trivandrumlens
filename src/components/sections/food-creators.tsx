@@ -38,39 +38,7 @@ export function FoodCreators() {
           </p>
         </div>
 
-        {/* Ambience Videos Row */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
-          <div className="space-y-4">
-            <Card className="overflow-hidden rounded-[2rem] shadow-xl border-none">
-              <CardContent className="p-0 aspect-[16/9] bg-black">
-                <video
-                  src="https://exlaucgslmfiakllbtnq.supabase.co/storage/v1/object/public/Additional/TukdojiPutla.mp4"
-                  className="w-full h-full object-cover"
-                  controls
-                  playsInline
-                  preload="metadata"
-                />
-              </CardContent>
-            </Card>
-            <p className="text-center font-headline text-xl font-bold">Tukdoji Putla Ambiance</p>
-          </div>
-          <div className="space-y-4">
-            <Card className="overflow-hidden rounded-[2rem] shadow-xl border-none">
-              <CardContent className="p-0 aspect-[16/9] bg-black">
-                <video
-                  src="https://exlaucgslmfiakllbtnq.supabase.co/storage/v1/object/public/Additional/SambhajiSqaure.mp4"
-                  className="w-full h-full object-cover"
-                  controls
-                  playsInline
-                  preload="metadata"
-                />
-              </CardContent>
-            </Card>
-            <p className="text-center font-headline text-xl font-bold">Sambhaji Square Moments</p>
-          </div>
-        </div>
-
-        {/* Featured Content Row */}
+        {/* Featured Content Row - Influencer & Celebrity */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
           {/* Instagram Reel */}
           <div className="space-y-4">
